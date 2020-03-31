@@ -92,3 +92,64 @@ A return statement, such as
 ends execution of the function in which it appears, and passes the value that appears between the *return* and the semicolon (*0* in this example) back to the program that called the function that is returning. The value that is returned must have a type that is appropriate for the type that the function says it will return. In the case of *main*, the return type is *int* and the program to which *main* returns is the C++ implementation itself. Therefore, a *return* from *main* must include an integer-valued expression, which is passed back to the implementation.
 
 Of course, there may be more than one point at which it might make sense to terminate a program; such a program may have more than one return statement. If the definition of a function promises that the function returns a value of a particular type, then every return statement in the function must return a value of an appropriate type
+
+### Compile and Execute
+
+Compile: A computer can only understand machine code. A compiler can translate the C++ programs that we write into machine code. To compile a file, you need to type ```g++``` followed by the file name in the terminal:
+
+``` g++ hello.cpp ```
+
+The compiler will then translate the C++ program **hello.cpp** and create a machine code file called **a.out**.
+
+**Execute**: To execute the new machine code file, all you need to do is type ```./``` and the machine code file name in the terminal:
+
+```./a.out```
+
+The executable file will then be loaded to computer memory and the computer’s CPU (Central Processing Unit) executes the program one instruction at a time.
+
+#### Compile and Execute (Naming Executables)
+
+**Compile**: Sometimes when we compile, we want to give the output executable file a specific name. To do so, the compile command is slightly different. We still need to write ```g++``` and the file name in the terminal. After that, there should be ```-o``` and then the name that you want to give to the executable file:
+
+```g++ hello.cpp -o hello```
+
+The compiler will then translate the C++ program **hello.cpp** and create a machine code file called **hello**.
+
+**Execute**: To execute the new machine code file, all you need to do is type ```./``` and the machine code file name in the terminal: 
+
+```./hello```
+
+The executable file will then be loaded to computer memory and the computer’s CPU will execute the program one instruction at a time.
+
+### The Process
+
+C++ is a compiled language. That means that to get a program to run, you must first translate it from the human-readable form to something a machine can “understand.” That translation is done by a program called a *compiler*.
+
+What you read and write is called *source code* (usually it’s in an English-like language like C++), and what the computer executes is called *executable, object code*, or *machine code* (a machine language).
+
+Typically C++ source code files are given the suffix:
+
+- **.cpp** (ex: **hello.cpp**) or
+- **.h** (ex: **std_lib_facilities.h**).
+
+#### Compile:
+
+```g++ hello.cpp -o hello```
+
+A compiler translates the C++ program into machine language code which it stores on the disk as a file with the extension **.o** (e.g. **hello.o**). A linker then links the object code with standard library routines that the program may use and creates an executable image which is also saved on disk, usually as a file with the file name without any extension (e.g. **hello**).
+
+#### Execute:
+
+```./hello```
+
+The executable is loaded from the disk to memory and the computer’s CPU (**C**entral **P**rocessing **U**nit) executes the program one instruction at a time.
+
+#### Running Hello World Locally:
+
+On the Mac, it’s called the Terminal. On Windows, it’s called the Command Prompt.
+
+Video Tutorials:
+[Running Hello World via Terminal (Mac)](https://www.youtube.com/watch?v=N4796qsD-H8&feature=youtu.be)
+[Running Hello World via Command Prompt (Windows)](https://youtu.be/GxHLErBLgI8)
+[Using Microsoft Visual Studio Code](https://youtu.be/hKCYP4HWisE)
+
