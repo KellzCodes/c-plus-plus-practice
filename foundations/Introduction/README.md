@@ -149,7 +149,10 @@ The executable is loaded from the disk to memory and the computer’s CPU (**C**
 On the Mac, it’s called the Terminal. On Windows, it’s called the Command Prompt.
 
 Video Tutorials:
+
 [Running Hello World via Terminal (Mac)](https://www.youtube.com/watch?v=N4796qsD-H8&feature=youtu.be)
+
 [Running Hello World via Command Prompt (Windows)](https://youtu.be/GxHLErBLgI8)
+
 [Using Microsoft Visual Studio Code](https://youtu.be/hKCYP4HWisE)
 
