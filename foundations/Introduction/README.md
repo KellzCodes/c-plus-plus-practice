@@ -93,7 +93,7 @@ ends execution of the function in which it appears, and passes the value that ap
 
 Of course, there may be more than one point at which it might make sense to terminate a program; such a program may have more than one return statement. If the definition of a function promises that the function returns a value of a particular type, then every return statement in the function must return a value of an appropriate type
 
-### Compile and Execute
+# Compile and Execute
 
 Compile: A computer can only understand machine code. A compiler can translate the C++ programs that we write into machine code. To compile a file, you need to type ```g++``` followed by the file name in the terminal:
 
@@ -156,3 +156,181 @@ Video Tutorials:
 
 [Using Microsoft Visual Studio Code](https://youtu.be/hKCYP4HWisE)
 
+# Variables
+
+"Every variable in C++ must be declared before it can be used!"
+Suppose we are building a game and we want to keep track of a player’s score that goes from 0 to 10. We need a variable!
+
+### Step 1: Declare a variable
+
+Before we can use a variable, we must declare, or create, it. To declare a variable, we need to provide two things:
+
+- A type for the variable.
+- A name for the variable.
+
+So to declare an integer variable called score, we need to write:
+
+```int score;```
+
+The ```int``` is the type of the variable. 
+The ```score``` is the name of the variable. 
+The ```;``` is how we end a statement. 
+In C++, variable names consist only of upper/lower case letters, digits, and/or underscores.
+
+**Note**: C++ is known as a strongly typed language. If you try to give an integer value a decimal number, you are going to get unexpected results, warnings, or errors.
+
+### Step 2: Initialize a Variable
+
+After we declare a variable, we can give it a value!
+
+Suppose that we have declared an ```int``` variable called ```score```, to set it to 0, we can simply write:
+
+```score = 0;```
+
+- The ```score``` is the name of the variable.
+- The ```=``` indicates assignment.
+- The ```0``` is the value you want to store inside the variable.
+
+**Note**: In C++, a single equal sign ```=``` does not really mean “equal”. It means “assign”. In the code above, we are assigning the ```score``` variable a value of 0.
+
+### Combining Step 1 and Step 2
+
+We can both declare and assign a value to a variable in a single initialization statement.
+
+Suppose we have these two lines:
+
+```
+// Declare a variable
+int score;
+
+// Initialize a variable
+score = 0;
+```
+
+We can actually combine these two lines into a single line of code:
+
+```int score = 0;```
+
+This means we are declaring an integer called score and setting it equal to 0.
+
+**Note**: We only need to declare a variable one time! And it is highly suggested to initialize a variable before using it later.
+
+### Arithmetic Operators
+
+Computers are incredible at doing calculations. Now that we have declared variables, let’s use them with *arithmetic operators* to calculate things!
+
+Here are some arithmetic operators:
+
+```+``` addition
+```-``` subtraction
+```*``` multiplication
+```/``` division
+```%``` modulo (divides and gives the remainder)
+
+For example:
+
+```
+int score = 0;
+// score is 0
+
+score = 4 + 2;
+// it is now 6
+
+score = 4 - 2;
+// it is now 2
+
+score = 4 * 2;
+// it is now 8
+
+score = 4 / 2;
+// and now 2
+
+score = 5 % 2;
+// and now 1
+```
+
+**Note**: The order of operations can be specified using parentheses. For example, the use of parentheses in ```score = 5 * (4 + 3)``` sets ```score``` equal to ```5 * 7``` rather than ```20 + 3```.
+
+### Chaining
+
+Now that we have outputted a variable and have also outputted things using multiple ```cout```s. Let’s take a closer look at ```cout``` again.
+
+If we have the code below:
+
+```
+int age = 28;
+
+std::cout << "Hello, I am ";
+std::cout << age;
+std::cout << " years old\n";
+```
+
+It will output:
+
+```Hello, I am 28 years old```
+
+Notice how we use quotes around the characters in "Hello, I am " but not in age.
+
+- We use quotes when we want a literal string.
+- We don’t use quotes when we refer to the value of something with a name (like a variable).
+
+So now, is it possible to write the ```cout``` statements within a single line?
+
+Yes! You can use multiple ```<<``` operators to *chain* the things you want to output.
+
+For the same code above you can also do:
+
+```
+int age = 28;
+
+std::cout << "Hello, I am " << age << " years old\n";
+```
+
+This is called **chaining**.
+
+### User Input
+
+As mentioned in the introduction, another way to assign a value to a variable is through user input. A lot of times, we want the user of the program to enter information for the program.
+
+We have ```cout``` for output, and there is something called ```cin``` that’s used for input!
+
+```
+std::cout << "Enter your password: ";
+std::cin >> password;
+```
+
+The name ```cin``` refers to the standard input stream (pronounced “see-in”, for **c**haracter **i**nput). The second operand of the ```>>``` operator (“get from”) specifies where that input goes.
+
+Here's an example program:
+
+```
+#include <iostream>
+
+int main() {
+  
+  int tip = 0;
+  std::cout << "Enter tip amount: ";
+  // Ask for user input. Put input in the variable named tip
+  std::cin >> tip;
+  std::cout << "You paid " << tip << " dollars \n";
+}
+```
+
+Output: "You paid 0 dollars"
+
+### Review
+
+Here is a review of the variables lesson:
+
+- A variable represents a particular piece of your computer’s memory that has been set aside for you to use to store, retrieve, and manipulate data.
+
+- C++ basic data types include:
+	- ```int```: integers
+	- ```double```: floating-point numbers
+	- ```char```: individual characters
+	- ```string```: sequence of characters
+	- ```bool```: true/false
+- Single equal sign ```=``` indicates assignment, not equality in the mathematical sense.
+- ```cin``` is how to receive input from the user.
+
+Check out the [Variables Cheat Sheet](https://www.codecademy.com/learn/learn-c-plus-plus/modules/learn-cpp-variables/cheatsheet) from Codecademy.
