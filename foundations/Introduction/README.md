@@ -6,7 +6,7 @@ This project is my coding journal. I am learning C++ from scratch and sharing my
 ## Table of Contents
 - [Hello World](#Hello-World)
 - [Comments](#Comments)
-- [#Include](##include)
+- [#Include](#include)
 - [The main function](#The-main-function)
 - [Curly braces](#Curly-braces)
 - [standard library](#Using-the-standard-library-for-output)
