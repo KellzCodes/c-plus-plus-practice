@@ -1,4 +1,20 @@
-# Getting Started
+# Introduction to C++
+## A simple repository that teaches the basics of C++
+
+This project is my coding journal. I am learning C++ from scratch and sharing my lessons with you. Hopefully, this will be a great tutorial. 
+
+## Table of Contents
+- [Hello World](#Hello-World)
+- [Comments](#Comments)
+- [#Include](##include)
+- [The main function](#The-main-function)
+- [Curly braces](#Curly-braces)
+- [standard library](#Using-the-standard-library-for-output)
+- [The return statement](#The-return-statement)
+- [Compile and Execute](#Compile-and-Execute)
+- [Variables](#variables)
+
+### Hello World
 
 The "Hello World!" program is a basic and small program. 
 
