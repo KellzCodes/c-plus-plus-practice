@@ -414,14 +414,14 @@ ax^2 + bx + c = 0
 
 Graphing, we get the curve below:
 
-https://s3.amazonaws.com/codecademy-content/courses/learn-cpp/variables/graph.gif
+![alt text](https://s3.amazonaws.com/codecademy-content/courses/learn-cpp/variables/graph.gif)
 
 The corresponding x values are the x-intercepts of the graph, while a, b, and c are constants.
 
 Write a C++ program called quadratic.cpp that solves the quadratic equation for the x‘s:
 
-https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.khanacademy.org%2Fmath%2Falgebra%2Fx2f8bb11595b61c86%3Aquadratic-functions-equations%2Fx2f8bb11595b61c86%3Aquadratic-formula-a1%2Fa%2Fquadratic-formula-review&psig=AOvVaw1JSrB8Z11buiNbPTrHv06i&ust=1586460259727000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPi4tp3H2egCFQAAAAAdAAAAABAD
-​
+![alt text](https://cdn.kastatic.org/googleusercontent/nI2riiPBcl9hZ22KKdYZGFmsVNhcKLiuwPly9l1tU5BMaqcOs9bfPKRyoGAFgK-PNpc-c7x_tNuskGdzawvy_Pza)
+
 1. Declare 3 variables:
 
 - a for the number a
@@ -445,17 +445,13 @@ And let the user type something and save that into variable ```a```.
 
 5. There are two roots here:
 
-For root1, the equation has a + sign:
-
-![alt text](C:\Users\kelda\Pictures\a.jpg)
+For root1, the equation has a + sign
 
 **Note**: You can use ```std::sqrt()``` to get a number’s square root.
 
 ```std::sqrt()``` is a built-in C++ function you gain access to by including the ```<cmath>``` library at the top of the file. For example, ```std::sqrt(9)``` would be 3.
 
-6. For ```root2```, it’s almost identical but the equation has a - sign:
-
-![alt text](C:\Users\kelda\Pictures\b.jpg)
+6. For ```root2```, it’s almost identical but the equation has a - sign
 
 7. Output these values using ```std::cout```
 
