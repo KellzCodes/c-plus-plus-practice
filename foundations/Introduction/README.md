@@ -174,6 +174,15 @@ Video Tutorials:
 
 # Variables
 
+- [Decare a variable](#Step-1:-Declare-a-variable)
+- [Initialize a Variable](#Step-2:-Initialize-a-Variable)
+- [Declaring and Initializing Variable](#Combining-Step-1-and-Step-2)
+- [Arithmetic Operators](#Arithmetic-Operators)
+- [Chaining](#Chaining)
+- [User Input](#User-Input)
+- [Summary of Variables Lesson](#Review)
+- [Basic C++ Programs](#Basic-C++-Programs)
+
 "Every variable in C++ must be declared before it can be used!"
 Suppose we are building a game and we want to keep track of a player’s score that goes from 0 to 10. We need a variable!
 
@@ -350,3 +359,128 @@ Here is a review of the variables lesson:
 - ```cin``` is how to receive input from the user.
 
 Check out the [Variables Cheat Sheet](https://www.codecademy.com/learn/learn-c-plus-plus/modules/learn-cpp-variables/cheatsheet) from Codecademy.
+
+# Basic C++ Programs
+
+- [Dog Years](#Dog-Years)
+
+## Dog Years
+
+Dogs have ages that don’t quite work like ours. This can be a little ruff when you want to know how old your dog would be if he/she is a human. Don’t fret — build a dog-age-converting program to translate your dog’s age into human years!
+
+Here’s how we can convert your dog’s age into human years:
+- The first two years of a dog’s life count as 21 human years.
+- Each following year counts as 4 human years.
+
+https://s3.amazonaws.com/codecademy-content/courses/learn-cpp/variables/dog.gif
+
+So a one-year-old dog is 10.5 years old in human years, and a two-year-old dog is 21 years old in human years… hmm this is about to get more complicated. Before you start doing the math in your head, let a computer take care of it!
+
+1. Declare an int variable named ```dog_age```, and set it equal to your dog’s age as a number.
+
+Note: This version of the program is for dogs older than 2 years old.
+
+2. Let’s declare three more ```int``` variables:
+
+```early_years```: for your dog’s first two years
+```later_years```: for your dog’s following years
+```human_years```: for your dog’s total human years
+
+3. “The first two years of a dog’s life count as 21 human years.”
+
+Let’s give the variable ```early_years``` a value of 21.
+
+4. “Each following year counts as 4 human years.”
+
+Give the variable ```later_years``` a value of ```dog_age``` minus 2, and then multiply by 4.
+
+5. Add ```early_years``` and ```later_years``` together, and store that in a variable named ```human_years```.
+
+6. Write a ```std::cout``` statement that displays your dog’s name and age in human years.
+
+Use chaining to display the value in the following sentence:
+
+"My name is ____! Ruff ruff, I am [AGE] years old in human years."
+
+You can fill in the blank with your dog’s name and ```[AGE]``` with the value of ```human_years``` in the sentence above.
+
+You can find the source code in the [dog_years.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/Introduction/dog_years.cpp) file.
+
+## Quadratic Formula
+
+In algebra, a quadratic equation is an equation having the form:
+
+ax^2 + bx + c = 0 
+
+Graphing, we get the curve below:
+
+https://s3.amazonaws.com/codecademy-content/courses/learn-cpp/variables/graph.gif
+
+The corresponding x values are the x-intercepts of the graph, while a, b, and c are constants.
+
+Write a C++ program called quadratic.cpp that solves the quadratic equation for the x‘s:
+
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.khanacademy.org%2Fmath%2Falgebra%2Fx2f8bb11595b61c86%3Aquadratic-functions-equations%2Fx2f8bb11595b61c86%3Aquadratic-formula-a1%2Fa%2Fquadratic-formula-review&psig=AOvVaw1JSrB8Z11buiNbPTrHv06i&ust=1586460259727000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPi4tp3H2egCFQAAAAAdAAAAABAD
+​
+1. Declare 3 variables:
+
+- a for the number a
+- b for the number b 
+- c for the number c
+
+They should be able to hold decimal numbers.
+
+2. Output this prompt for the user:
+
+```Enter a:```
+
+And let the user type something and save that into variable ```a```.
+
+3. Do the same for variable ```b``` and variable ```c```.
+
+4. Declare two variables to store the roots: 
+
+- ```root1``` for root number one 
+- ```root2``` for root number two
+
+5. There are two roots here:
+
+For root1, the equation has a + sign:
+
+![alt text](C:\Users\kelda\Pictures\a.jpg)
+
+**Note**: You can use ```std::sqrt()``` to get a number’s square root.
+
+```std::sqrt()``` is a built-in C++ function you gain access to by including the ```<cmath>``` library at the top of the file. For example, ```std::sqrt(9)``` would be 3.
+
+6. For ```root2```, it’s almost identical but the equation has a - sign:
+
+![alt text](C:\Users\kelda\Pictures\b.jpg)
+
+7. Output these values using ```std::cout```
+
+8. Compile and execute using the terminal.
+
+And plug in 6, -7, -3 for a, b, and c:
+
+```
+Enter a: 6
+Enter b: -7
+Enter c: -3
+Root 1 is 1.5
+Root 2 is -0.333333
+```
+
+Or try 3, -11, -4 for a, b, and c:
+
+```
+Enter a: 3
+Enter b: -11
+Enter c: -4
+Root 1 is 4
+Root 2 is -0.333333
+```
+
+Did you get the right roots?
+
+The source code for this program is found in the [quadratic.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/Introduction/quadratic.cpp) file.
