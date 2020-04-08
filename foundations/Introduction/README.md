@@ -174,8 +174,8 @@ Video Tutorials:
 
 # Variables
 
-- [Decare a variable](#Step-1:-Declare-a-variable)
-- [Initialize a Variable](#Step-2:-Initialize-a-Variable)
+- [Decare a variable](#Step-1-Declare-a-variable)
+- [Initialize a Variable](#Step-2-Initialize-a-Variable)
 - [Declaring and Initializing Variable](#Combining-Step-1-and-Step-2)
 - [Arithmetic Operators](#Arithmetic-Operators)
 - [Chaining](#Chaining)
@@ -186,7 +186,7 @@ Video Tutorials:
 "Every variable in C++ must be declared before it can be used!"
 Suppose we are building a game and we want to keep track of a player’s score that goes from 0 to 10. We need a variable!
 
-### Step 1: Declare a variable
+### Step 1 Declare a variable
 
 Before we can use a variable, we must declare, or create, it. To declare a variable, we need to provide two things:
 
@@ -204,7 +204,7 @@ In C++, variable names consist only of upper/lower case letters, digits, and/or 
 
 **Note**: C++ is known as a strongly typed language. If you try to give an integer value a decimal number, you are going to get unexpected results, warnings, or errors.
 
-### Step 2: Initialize a Variable
+### Step 2 Initialize a Variable
 
 After we declare a variable, we can give it a value!
 
