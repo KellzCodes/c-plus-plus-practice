@@ -363,6 +363,7 @@ Check out the [Variables Cheat Sheet](https://www.codecademy.com/learn/learn-c-p
 # Basic C++ Programs
 
 - [Dog Years](#Dog-Years)
+- [Quadratic Formula](#Quadratic-Formula)
 
 ## Dog Years
 
