@@ -373,7 +373,7 @@ Here’s how we can convert your dog’s age into human years:
 - The first two years of a dog’s life count as 21 human years.
 - Each following year counts as 4 human years.
 
-https://s3.amazonaws.com/codecademy-content/courses/learn-cpp/variables/dog.gif
+![alt text](https://s3.amazonaws.com/codecademy-content/courses/learn-cpp/variables/dog.gif)
 
 So a one-year-old dog is 10.5 years old in human years, and a two-year-old dog is 21 years old in human years… hmm this is about to get more complicated. Before you start doing the math in your head, let a computer take care of it!
 
