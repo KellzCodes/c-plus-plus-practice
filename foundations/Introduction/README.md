@@ -13,6 +13,7 @@ This project is my coding journal. I am learning C++ from scratch and sharing my
 - [The return statement](#The-return-statement)
 - [Compile and Execute](#Compile-and-Execute)
 - [Variables](#variables)
+- [Basic Data Types](#Basic-Data-Types)
 - [Basic Programs](#Basic-Programs)
 
 ### Hello World
@@ -360,6 +361,65 @@ Here is a review of the variables lesson:
 - ```cin``` is how to receive input from the user.
 
 Check out the [Variables Cheat Sheet](https://www.codecademy.com/learn/learn-c-plus-plus/modules/learn-cpp-variables/cheatsheet) from Codecademy.
+
+# Basic Data Types
+
+C++ provides a rather large number of types. However, you can write perfectly good programs using only five of those:
+
+![alt text](https://s3.amazonaws.com/codecademy-content/courses/learn-cpp/variables/data-types.gif)
+
+Here are some examples of declaring and initializing variables:
+
+```
+int age = 28;
+
+double price = 8.99;
+
+char grade = 'A';
+
+std::string message = "Game Over";
+
+bool late_to_work = true;
+```
+
+## Datatype Modifiers
+
+As the name implies, datatype modifiers are used with built-in data types to modify the length of data that a particular data type can hold. Data type modifiers in C++ are:
+
+- ```signed```
+- ```unsigned```
+- ```short```
+- ```long```
+
+## Const
+```const``` (constant) variables cannot be changed by your program during execution.
+
+```
+const double quarter = 0.25;
+
+
+// and now variable quarter can only be 0.25
+```
+
+Simply add the keyword const before the data type during declaration to make the variable not modifiable.
+
+## Type Conversion
+
+A type cast is basically a conversion from one type to another.
+
+The notation ```(type) value``` means “convert ```value``` to ```type```“. So for example:
+
+```
+double weight1;
+int weight2;
+
+weight1 = 154.49;
+weight2 = (int) weight1;
+
+// weight2 is now 154
+```
+
+**Note**: Going from a ```double``` to an ```int``` simply removes the decimal. There’s no rounding involved.
 
 # Basic Programs
 
