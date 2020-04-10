@@ -365,6 +365,7 @@ Check out the [Variables Cheat Sheet](https://www.codecademy.com/learn/learn-c-p
 
 - [Dog Years](#Dog-Years)
 - [Quadratic Formula](#Quadratic-Formula)
+- [Piggy Bank](#Piggy-Bank)
 
 ## Dog Years
 
