@@ -13,7 +13,7 @@ This project is my coding journal. I am learning C++ from scratch and sharing my
 - [The return statement](#The-return-statement)
 - [Compile and Execute](#Compile-and-Execute)
 - [Variables](#variables)
-- [Basic C++ Programs](#Basic-C++-Programs)
+- [Basic Programs](#Basic-Programs)
 
 ### Hello World
 
@@ -361,7 +361,7 @@ Here is a review of the variables lesson:
 
 Check out the [Variables Cheat Sheet](https://www.codecademy.com/learn/learn-c-plus-plus/modules/learn-cpp-variables/cheatsheet) from Codecademy.
 
-# Basic C++ Programs
+# Basic Programs
 
 - [Dog Years](#Dog-Years)
 - [Quadratic Formula](#Quadratic-Formula)
