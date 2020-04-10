@@ -482,3 +482,41 @@ Root 2 is -0.333333
 Did you get the right roots?
 
 The source code for this program is found in the [quadratic.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/Introduction/quadratic.cpp) file.
+
+## Piggy Bank
+# A program that prompts the user for an amount of three different foreign currencies then converts them to US dollars.
+
+1. Declare four variables:
+- ```pesos```
+- ```reais```
+- ```soles```
+- ```dollars```
+
+2. Ask the user the first question: 
+
+"Enter number of Colombian Pesos:"
+
+3. Take the user's answer to the first question and store it in ```pesos```
+
+4. Do the same for reais and soles currencies.
+
+5. Google the conversion rates
+- from Pesos to USD
+- from Reais to USD
+- from Soles to USD
+
+6. Write an equation that solves for the total USD.
+
+This will look something like:
+
+```
+dollars = (conversion_rate1 * currency1) + 
+(conversion_rate2 * currency2) + 
+(conversion_rate3 * currency3)
+```
+
+7. Display the total amount of USD. Your final output should look like:
+
+"US Dollars = $______"
+
+The source code for this program can be found in the [currency.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/Introduction/currency.cpp) file.
