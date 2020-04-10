@@ -39,11 +39,11 @@ So in the code above, if ```coin_flip``` is equal to 1, the program outputs “H
 
 ## Coin Flip
 
-![alt text](https://s3.amazonaws.com/codecademy-content/courses/learn-cpp/conditionals-and-logic/coinflip.gif)
-
 The program simulates a coin toss:
 - 50% of the time, it’s Heads.
 - 50% of the time, it’s Tails.
+
+![alt text](https://s3.amazonaws.com/codecademy-content/courses/learn-cpp/conditionals-and-logic/coinflip.gif)
 
 1. Open the [coinflip.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/coinflip.cpp) file and run the program five times to see an ```if``` ```else``` statement in action. See how many times it goes Heads.
 
