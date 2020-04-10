@@ -2,16 +2,16 @@
 
 int main() {
 
-  int grade = 59;
+	// Declare and initialize grade
+	int grade = 59; 
 
-  if (grade > 60) {
+	// If grade is greater than 60, print "Pass"
+	if (grade > 60) { 
+		std::cout << "Pass\n"; 
+	}
 
-    std::cout << "Pass\n";
-
-  }
-  
-  else{
-    std::cout << "Fail";
-  }
-  
+	// Otherwise, print "Fail"
+	else { 
+		std::cout << "Fail"; 
+	}
 }
