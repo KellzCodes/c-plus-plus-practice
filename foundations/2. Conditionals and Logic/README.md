@@ -3,9 +3,9 @@
 
 ## Table of Contents
 - [If Statement](#If-Statement)
-- [Basic Programs](#Basic-Programs)
 - [Relational Operators](#Relational-Operators)
 - [Else Clause](#Else-Clause)
+- [Basic Programs](#Basic-Programs)
 
 ### If Statement
 
