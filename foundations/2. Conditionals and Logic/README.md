@@ -232,3 +232,23 @@ A pokemon identification program that makes use of a switch statement.
 - ```case 10``` that outputs “Pidgey”
 - ```case 11``` that outputs “Pidgeotto”
 - ```case 12``` that outputs “Pidgeot”
+
+## Space
+
+A program that helps keep track of weight and BMI on different planets.
+
+1. The program should ask the user what their earth weight is.
+2. Ask the user to enter a number for the planet they want to visit.
+3. The program should compute the user's weight on the destination planet.
+
+Here is the table of conversion:
+
+| # | Planet | Relative Gravity |
+| 1 | Venus | 0.78 |
+| 2 | Mars | 0.39 |
+| 3 | Jupiter | 2.65 |
+| 4 | Saturn | 1.17 |
+| 5 | Uranus | 1.05 |
+| 6 | Neptune | 1.23 |
+
+The source code can be found in the [space.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/space.cpp) file. 
