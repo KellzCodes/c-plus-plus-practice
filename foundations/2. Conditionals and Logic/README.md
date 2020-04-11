@@ -5,6 +5,7 @@
 - [If Statement](#If-Statement)
 - [Relational Operators](#Relational-Operators)
 - [Else Clause](#Else-Clause)
+- [Else if](#Else-if)
 - [Basic Programs](#Basic-Programs)
 
 ### If Statement
@@ -87,9 +88,64 @@ So in the code above, if ```coin``` is equal to 1, the program outputs “Heads�
 
 **Note**: It’s either or — only one of them will execute!
 
+### Else if
+
+what happens if you want more than two possible outcomes?
+
+This is where ```else if``` comes in.
+
+```
+if (condition) {
+
+  some code
+
+} else if (condition) {
+
+  some code
+
+} else {
+
+  some code
+
+}
+```
+
+The ```else if``` statement always comes after the ```if``` statement and before the ```else``` statement. The ```else if``` statement also takes a condition.
+
+And you can have more than one of them! Here’s an example with three of them:
+
+```
+if (grade == 9) {
+
+  std::cout << "Freshman\n";
+
+} 
+else if (grade == 10) {
+
+  std::cout << "Sophomore\n";
+
+}
+else if (grade == 11) {
+
+  std::cout << "Junior\n";
+
+} 
+else if (grade == 12) {
+
+  std::cout << "Senior\n";
+
+}
+else {
+
+  std::cout << "Super Senior\n";
+
+}
+```
+
 # Basic Programs
 - [Coin Flip](#Coin-Flip)
 - [Grade](#Grade)
+- [pH](#pH)
 
 ## Coin Flip
 
@@ -115,3 +171,12 @@ A simple gradebook program meant to show how ```if``` and ```else``` statements 
 5. Add an ```else``` statement that outputs “Fail”.
 
 Example code is found in the [grade.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/grade.cpp) file.
+
+## pH
+In chemistry, [pH](https://en.wikipedia.org/wiki/PH) is a scale used to specify the acidity or basicity of an aqueous solution.
+1. Write an if, else if, else statement that:
+- If ```ph``` is greater than 7, output “Basic”.
+- If ```ph``` is less than 7, output “Acidic”.
+- If neither, output “Neutral”.
+
+Source code for this program can be found in the [ph.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/ph.cpp) file.
