@@ -16,9 +16,11 @@ The Foundations folder of this project contains the basic fundamentals of C++. T
 	- compiling and executing programs
 	- Declaring and initializing variables
 	- basic data types
+	- basic programs demonstrating knowledge
 - [Conditionals and Logic](https://github.com/keldavis/c-plus-plus-practice/tree/master/foundations/2.%20Conditionals%20and%20Logic)
 	- If Statement
 	- Relational Operators
 	- Else Clause
 	- Else If
 	- Switch Statement
+	- basic programs demonstrating knowledge
