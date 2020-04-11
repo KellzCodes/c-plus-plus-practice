@@ -243,12 +243,13 @@ A program that helps keep track of weight and BMI on different planets.
 
 Here is the table of conversion:
 
-| # | Planet | Relative Gravity |
-| 1 | Venus | 0.78 |
-| 2 | Mars | 0.39 |
-| 3 | Jupiter | 2.65 |
-| 4 | Saturn | 1.17 |
-| 5 | Uranus | 1.05 |
-| 6 | Neptune | 1.23 |
+| # | Planet  | Relative Gravity |
+|---|---------|------------------|
+| 1 | Venus   | 0.78             |
+| 2 | Mars    | 0.39             |
+| 3 | Jupiter | 2.65             |
+| 4 | Saturn  | 1.17             |
+| 5 | Uranus  | 1.05             |
+| 6 | Neptune | 1.23             |
 
 The source code can be found in the [space.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/space.cpp) file. 
