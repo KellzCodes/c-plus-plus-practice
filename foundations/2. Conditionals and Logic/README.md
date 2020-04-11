@@ -3,9 +3,9 @@
 
 ## Table of Contents
 - [If Statement](#If-Statement)
-- [Basic Programs](#Basic-Programs)
 - [Relational Operators](#Relational-Operators)
 - [Else Clause](#Else-Clause)
+- [Basic Programs](#Basic-Programs)
 
 ### If Statement
 
@@ -106,12 +106,12 @@ A simple gradebook program meant to show how ```if``` and ```else``` statements 
 
 1. Declare an int named ```grade``` and set it equal to 90.
 
-2. Write an if statement where if grade > 60 is true, output “Pass”.
+2. Write an if statement where if ```grade > 60``` is ```true```, output “Pass”.
 
 3. Change the condition ```grade > 60``` to ```grade < 60```. Observe what happens.
 
 4. Change the condition ```grade < 60``` to ```grade != 60```. Observe what happens. 
 
-5. Add an else statement that outputs “Fail”.
+5. Add an ```else``` statement that outputs “Fail”.
 
 Example code is found in the [grade.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/grade.cpp) file.
