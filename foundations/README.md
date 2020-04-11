@@ -183,7 +183,7 @@ bool organ_donor = true;
 bool late_to_work = false;
 ```
 
-## Conditionals & Logic
+## Conditionals and Logic
 
 #### If Statement
 
