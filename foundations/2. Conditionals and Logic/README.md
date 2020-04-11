@@ -6,6 +6,7 @@
 - [Relational Operators](#Relational-Operators)
 - [Else Clause](#Else-Clause)
 - [Else if](#Else-if)
+- [Switch Statement](#Switch-Statement)
 - [Basic Programs](#Basic-Programs)
 
 ### If Statement
@@ -142,10 +143,51 @@ else {
 }
 ```
 
+### Switch Statement
+
+Now that we know how ```if```, ```else if```,and ```else``` work, we can write programs that have multiple outcomes. Programs with multiple outcomes are so common that C++ provides a special statement for it… the ```switch``` statement!
+
+A ```switch``` statement provides an alternative syntax that is easier to read and write. However, you are going to find these less frequently than ```if```, ```else if```, and ```else``` in the wild.
+
+A ```switch``` statement looks like this:
+
+```
+switch (grade) {
+
+  case 9:
+    std::cout << "Freshman\n";
+    break;
+  case 10:
+    std::cout << "Sophomore\n";
+    break;
+  case 11:
+    std::cout << "Junior\n";
+    break;
+  case 12:
+    std::cout << "Senior\n";
+    break;
+  default:
+    std::cout << "Invalid\n";
+    break;
+
+}
+```
+
+- The ```switch``` keyword initiates the statement and is followed by ```()```, which contains the value that each case will compare. In the example, the value or expression of the switch statement is ```grade```. One restriction on this expression is that it must evaluate to an integral type (```int```, ```char```, ```short```, ```long```, ```long long```, or ```enum```).
+- Inside the block, ```{}```, there are multiple cases.
+- The ```case``` keyword checks if the expression matches the specified value that comes after it. The value following the first case is ```9```. If the value of ```grade``` is equal to ```9```, then the code that follows the ```:``` would run.
+- The ```break``` keyword tells the computer to exit the block and not execute any more code or check any other cases inside the code block.
+- At the end of each switch statement, there is a ```default``` statement. If none of the cases are ```true```, then the code in the ```default``` statement will run. It’s essentially the ```else``` part.
+
+In the code above, suppose ```grade``` is equal to ```10```, then the output would be “Sophomore”.
+
+**Note**: Without the ```break``` keyword at the end of each case, the program would execute the code for the first matching case and all subsequent cases, including the ```default``` code. This behavior is different from ```if``` / ```else``` conditional statements which execute only one block of code.
+
 # Basic Programs
 - [Coin Flip](#Coin-Flip)
 - [Grade](#Grade)
 - [pH](#pH)
+- [Pokedex](#Pokedex)
 
 ## Coin Flip
 
@@ -180,3 +222,13 @@ In chemistry, [pH](https://en.wikipedia.org/wiki/PH) is a scale used to specify 
 - If neither, output “Neutral”.
 
 Source code for this program can be found in the [ph.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/ph.cpp) file.
+
+## Pokedex
+A pokemon identification program that makes use of a switch statement.
+
+![alt text](https://media3.giphy.com/media/DfPZI9D6kRij6/giphy.webp?cid=ecf05e47a80816f7303d1aa1ad7c31cc241623c9635c5f24&rid=giphy.webp)
+
+1. Open the [pokedex.cpp] file and add 3 more cases to the switch statement right before ```default```:
+- ```case 10``` that outputs “Pidgey”
+- ```case 11``` that outputs “Pidgeotto”
+- ```case 12``` that outputs “Pidgeot”
