@@ -228,7 +228,7 @@ A pokemon identification program that makes use of a switch statement.
 
 ![alt text](https://media3.giphy.com/media/DfPZI9D6kRij6/giphy.webp?cid=ecf05e47a80816f7303d1aa1ad7c31cc241623c9635c5f24&rid=giphy.webp)
 
-1. Open the [pokedex.cpp] file and add 3 more cases to the switch statement right before ```default```:
+1. Open the [pokedex.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/pokedex.cpp) file and add 3 more cases to the switch statement right before ```default```:
 - ```case 10``` that outputs “Pidgey”
 - ```case 11``` that outputs “Pidgeotto”
 - ```case 12``` that outputs “Pidgeot”
