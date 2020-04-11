@@ -7,7 +7,7 @@ int main() {
   switch(number) {
     
     case 1 :
-      std::cout << "Bulbusaur\n";
+      std::cout << "Bulbasaur\n";
       break;
     case 2 :
       std::cout << "Ivysaur\n";
