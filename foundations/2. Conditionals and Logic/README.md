@@ -7,6 +7,7 @@
 - [Else Clause](#Else-Clause)
 - [Else if](#Else-if)
 - [Switch Statement](#Switch-Statement)
+- [Logical Operator &&](#Logical-AND-Operator)
 - [Basic Programs](#Basic-Programs)
 
 ### If Statement
@@ -183,11 +184,33 @@ In the code above, suppose ```grade``` is equal to ```10```, then the output wou
 
 **Note**: Without the ```break``` keyword at the end of each case, the program would execute the code for the first matching case and all subsequent cases, including the ```default``` code. This behavior is different from ```if``` / ```else``` conditional statements which execute only one block of code.
 
+### Logical AND Operator
+
+The ```and``` logical operator is denoted by ```&&```.
+
+It returns ```true``` if the condition on the left *and* the condition on the right are both ```true```. Otherwise, it returns ```false```.
+
+Here’s the truth table:
+
+| a     | b     | a && b |
+|-------|-------|--------|
+| false | false | false  |
+| false | true  | false  |
+| true  | false | false  |
+| true  | true  | true   |
+
+For instance:
+- ```( 1 < 2 && 2 < 3 )``` returns ```true```
+- ```( 1 < 2 && 2 > 3 )``` returns ```false```
+
+**Note**: The keyword ```and``` can also be used in the place of ```&&```.
+
 # Basic Programs
 - [Coin Flip](#Coin-Flip)
 - [Grade](#Grade)
 - [pH](#pH)
 - [Pokedex](#Pokedex)
+- [And](#And)
 
 ## Coin Flip
 
@@ -253,3 +276,16 @@ Here is the table of conversion:
 | 6 | Neptune | 1.23             |
 
 The source code can be found in the [space.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/space.cpp) file. 
+
+## And
+
+Simple program that demonstrates logical &&
+
+1. Declare and initialize variables:
+  - ```int hunger = true;```
+  - ```int anger = true;```
+
+2. Write the following if statement:
+  - If ```hunger``` is ```true``` *and* ```anger``` is ```true```, then print out the word ```"Hangry"```.
+
+Source code can be found in [and.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/and.cpp) file.
