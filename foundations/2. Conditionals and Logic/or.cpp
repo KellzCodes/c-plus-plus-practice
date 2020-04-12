@@ -9,4 +9,9 @@ int main() {
   if(day == 6 || day == 7){
     std::cout << "Weekend\n";
   }
+
+  // Alternate solution
+  if(day == 6 or day == 7){
+    std::cout << "Weekend\n";
+  }
 }
