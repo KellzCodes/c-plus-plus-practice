@@ -7,7 +7,9 @@
 - [Else Clause](#Else-Clause)
 - [Else if](#Else-if)
 - [Switch Statement](#Switch-Statement)
-- [Logical Operator &&](#Logical-AND-Operator)
+- [Logical Operator: &&](#Logical-AND-Operator)
+- [Logical Operator: ||](#Logical-OR-Operator)
+- [Logical Operator: !](#Logical-NOT-Operator)
 - [Basic Programs](#Basic-Programs)
 
 ### If Statement
@@ -205,12 +207,57 @@ For instance:
 
 **Note**: The keyword ```and``` can also be used in the place of ```&&```.
 
+### Logical OR Operator
+
+The ```or``` logical operator is denoted by ```||```.
+
+It returns ```true``` when the condition on the left is ```true``` or the condition on the right is ```true```. Only one of them needs to be ```true```.
+
+Here’s the truth table:
+
+| a     | b     | a || b |
+|-------|-------|--------|
+| false | false | false  |
+| false | true  | true   |
+| true  | false | true   |
+| true  | true  | true   |
+
+For instance:
+
+- ```( 1 < 2 || 2 > 3 )``` returns ```true```
+- ```( 1 > 2 || 2 > 3 )``` returns ```false```
+
+**Note**: The keyword ```or``` can be used in the place of ```||```.
+
+### Logical NOT Operator
+
+The ```not``` logical operator is denoted by ```!```.
+
+It reverses the ```bool``` outcome of the expression that immediately follows.
+
+Here’s the truth table:
+
+| a     | !a    |
+|-------|-------|
+| true  | false |
+| false | true  |
+
+For instance:
+
+- ```( !true )``` returns ```false```
+- ```( !false )``` returns ```true```
+- ```( !(10 < 11) )``` returns ```false```
+
+**Note**: The keyword ```not``` can be used in the place of ```!```.
+
 # Basic Programs
 - [Coin Flip](#Coin-Flip)
 - [Grade](#Grade)
 - [pH](#pH)
 - [Pokedex](#Pokedex)
 - [And](#And)
+- [Or](#Or)
+- [Not](#Not)
 
 ## Coin Flip
 
@@ -279,7 +326,7 @@ The source code can be found in the [space.cpp](https://github.com/keldavis/c-pl
 
 ## And
 
-Simple program that demonstrates logical &&
+Simple program that demonstrates logical ```&&```
 
 1. Declare and initialize variables:
   - ```int hunger = true;```
@@ -289,3 +336,24 @@ Simple program that demonstrates logical &&
   - If ```hunger``` is ```true``` *and* ```anger``` is ```true```, then print out the word ```"Hangry"```.
 
 Source code can be found in [and.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/and.cpp) file.
+
+## Or
+
+Simple program that demonstrates logical ```||```
+
+1. Declare an integer named ```day``` and set it equal to 6
+
+2. Write the following ```if``` statement:
+- If ```day``` is equal to 6 or ```day``` is equal to 7, then print the word ```"Weekend"```.
+
+The source code for this program can be found in the [or.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/or.cpp) file.
+
+## Not
+
+Simple program that demonstrates logical ```!```
+
+1. Declare a ```bool``` named ```logged_in``` and set it equal to ```false```.
+2. Write the following ```if``` statement:
+- If the user is ```!logged_in```, then print the phrase ```"Try again"```.
+
+The source code for this program can be found in the [not.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/not.cpp) file.
