@@ -215,12 +215,14 @@ It returns ```true``` when the condition on the left is ```true``` or the condit
 
 Here’s the truth table:
 
-| a     | b     | a || b |
-|-------|-------|--------|
-| false | false | false  |
-| false | true  | true   |
-| true  | false | true   |
-| true  | true  | true   |
+| a     | b     | a||b  |
+|-------|-------|-------|
+| false | false | false |
+| false | true  | true  |
+| true  | false | true  |
+| true  | true  | true  |
+
+
 
 For instance:
 
@@ -260,6 +262,7 @@ For instance:
 - [Not](#Not)
 - [Leap Year](#Leap-Year)
 - [Magic 8 ball](#Magic-Eight-Ball)
+- [Harry Potter Sorting Hat Quiz](#Harry-Potter-Sorting-Hat-Quiz)
 
 ## Coin Flip
 
@@ -385,67 +388,67 @@ A simple program that will output a random fortune each time it executes.
 
 1. Create a skeleton for the program. Add:
 
-```
-#include <iostream>
+  ```
+  #include <iostream>
 
-int main() {
+  int main() {
 
-  // Your future is here
+    // Your future is here
 
-}
-```
+  }
+  ```
 
 2. The first line should be the same across all executions, so let’s output the phrase ```MAGIC 8-BALL:```.
 
 3. Similar to the Coin Flip program, we need to generate a random number.
 
-C++ has a ```std::rand()``` function from **cstdlib** that generates a random number.
+  C++ has a ```std::rand()``` function from **cstdlib** that generates a random number.
 
-For example, if you add ```#include <cstdlib>```, you can use the ```std::rand()``` function:
+  For example, if you add ```#include <cstdlib>```, you can use the ```std::rand()``` function:
 
-```
-std::cout << std::rand() << "\n";
-std::cout << std::rand() << "\n";
-std::cout << std::rand() << "\n";
-```
+  ```
+  std::cout << std::rand() << "\n";
+  std::cout << std::rand() << "\n";
+  std::cout << std::rand() << "\n";
+  ```
 
-It would output something like:
+  It would output something like:
 
-```
-1804289383
-846930886
-1681692777
-```
+  ```
+  1804289383
+  846930886
+  1681692777
+  ```
 
-So, create an ```int``` variable and set it equal to a random number:
+  So, create an ```int``` variable and set it equal to a random number:
 
-```
-int answer = std::rand();
-```
+  ```
+  int answer = std::rand();
+  ```
 
-And output it in the terminal.
+  And output it in the terminal.
 
-Don’t forget to add ```#include <cstdlib>``` at the top.
+  Don’t forget to add ```#include <cstdlib>``` at the top.
 
 4. There are 20 different text outputs in the official Magic 8-Ball, but let’s write your own. And let’s do 10 of them.
 
-So we don’t just want any random number. We want a random number from 0-9.
+  So we don’t just want any random number. We want a random number from 0-9.
 
-Change your ```answer``` to:
-```
-int answer = std::rand() % 10;
-```
+  Change your ```answer``` to:
+  ```
+  int answer = std::rand() % 10;
+  ```
 
 The ```%``` is the modulo symbol that returns the remainder.
 
 5. If you run the program a bunch of times, you will realize that ```answer``` doesn’t change.
 
-For our program to work, we need to get a different random number for each execution.
+  For our program to work, we need to get a different random number for each execution.
 
-To do so, we need to add this line of code before the declaration of ```answer```:
-```
-srand(time(NULL));
-```
+  To do so, we need to add this line of code before the declaration of ```answer```:
+  ```
+  srand(time(NULL));
+  ```
 
 This sets the “seed” of the random number generator.
 
@@ -461,3 +464,180 @@ Sample source code for this program using ```else``` statements can be found in 
 
 Sample source code for this program using a ```switch``` statement can be found in the [magic8_switch.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/magic8_switch.cpp) file.
 
+## Harry Potter Sorting Hat Quiz
+
+The Sorting Hat is a talking hat at Hogwarts that magically determines which of the four school Houses.
+
+![alt text](https://s3.amazonaws.com/codecademy-content/courses/learn-cpp/conditionals-and-logic/harrypotter.gif)
+
+1. create a skeleton for the program:
+  ```
+#include <iostream>
+
+int main() {
+
+  // The magic starts here
+
+}
+  ```
+
+2. Every time the Muggle-born quiz taker answers a question, they should receive points to one or more Houses.
+
+  Let’s declare four ```int``` variables: 
+  - ```gryffindor``` 
+  - ```hufflepuff``` 
+  - ```ravenclaw``` 
+  - ```slytherin``` 
+
+  And initialize them each to 0.
+
+3. declare another four ```int``` variables to store each of their answers to the four quiz questions:
+  - ```answer1```
+  - ```answer2```
+  - ```answer3```
+  - ```answer4```
+
+4. Add a ```std::cout``` statement that tells the Muggle that they have started the quiz with the phrase ```The Sorting Hat Quiz!```.
+
+5. Before moving on, press Save and let’s compile and execute using the terminal to make sure there are no bugs.
+
+6. And now comes the first question!
+
+  Use multiple std::cout statements to display the following question:
+
+  ```
+  Q1) When I'm dead, I want people to remember me as:
+
+    1) The Good
+    2) The Great
+    3) The Wise
+    4) The Bold
+  ```
+
+7. Then use ```std::cin``` to receive an input from the user.
+
+  Store that input in ```answer1```.
+
+8. Merlin’s beard! We have the user’s answer but now we need… conditionals & logic.
+
+  Write a control flow that:
+
+  - If ```answer1 == 1```, add one point to ```hufflepuff```.
+
+  - Else if ```answer1 == 2```, add one point to ```slytherin```.
+
+  - Else if ```answer1 == 3```, add one point to ```ravenclaw```.
+
+  - Else if ```answer1 == 4```, add one point to ```gryffindor```.
+
+  - Else, output ```Invalid input```.
+
+9. Compile and execute using the terminal. Make sure to debug.
+
+10. And now do the same thing for question 2:
+```
+  Q2) Dawn or Dusk?
+
+    1) Dawn
+    2) Dusk
+```
+
+  And use ```std::cin``` to get user’s input and store it in ```answer2```.
+
+11. However, for this question:
+
+  - If ```answer2 == 1```, one point to both ```gryffindor``` and ```ravenclaw```.
+
+  - Else if ```answer2 == 2```, one point to both ```hufflepuff``` and ```slytherin```.
+
+  - Else, output the phrase ```Invalid input```.
+
+12. Do the same thing for question 3:
+  ```
+  Q3) Which kind of instrument most pleases your ear?
+
+    1) The violin
+    2) The trumpet
+    3) The piano
+    4) The drum
+  ```
+
+13. For this question:
+
+  - If ```answer3 == 1```, add one to ```slytherin```.
+
+  - Else if ```answer3 == 2```, add one to ```hufflepuff```.
+
+  - Else if ```answer3 == 3```, add one to ```ravenclaw```.
+
+  - Else if ```answer3 == 4```, add one to ```gryffindor```.
+
+  - Else, output ```Invalid input```.
+
+14. Do the same thing for question 4:
+  ```
+  Q4) Which road tempts you most?
+
+    1) The wide, sunny grassy lane
+    2) The narrow, dark, lantern-lit alley
+    3) The twisting, leaf-strewn path through woods
+    4) The cobbled street lined (ancient buildings)
+  ```
+
+15. For this question:
+
+  - If ```answer4 == 1```, add one to ```hufflepuff```.
+
+  - Else if ```answer4 == 2```, add one to ```slytherin```.
+
+  - Else if ```answer4 == 3```, add one to ```gryffindor```.
+
+  - Else if ```answer4 == 4```, add one to ```ravenclaw```.
+
+  - Else, output ```Invalid input```.
+
+16. Now we need to find out which of the four Houses has the highest answer!
+
+  We will need another variable called ```max``` that starts at 0 and an empty string with:
+
+  ```
+  std::string house;
+  ```
+
+  And to find the maximum:
+
+  ```
+  if (gryffindor > max) {
+
+    max = gryffindor;
+    house = "Gryffindor";
+
+  }
+
+  if (hufflepuff > max) {
+
+    max = hufflepuff;
+    house = "Hufflepuff";
+
+  }
+
+  if (ravenclaw > max) {
+
+    max = ravenclaw;
+    house = "Ravenclaw";
+
+  }
+
+  if (slytherin > max) {
+
+    max = slytherin;
+    house = "Slytherin";
+
+  }
+
+  std::cout << house << "!\n";
+  ```
+
+  This also outputs the House.
+
+A sample code can be found can be found in the [sortinghat.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/sortinghat.cpp) file.
