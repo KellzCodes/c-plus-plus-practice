@@ -143,6 +143,7 @@ int main() {
 ```
 
 2. Instead of just asking for the user to answer it once, let’s add a ```while``` loop so that they answer it up to 50 times!
+
 ```
 	while (guess != 8 && tries < 50) {
 
@@ -153,9 +154,10 @@ int main() {
 
 	}
 ```
-	The ```&&``` symbol means and *and* it combines two conditions into one.
 
-	In this ```while``` loop, while ```guess``` does not equal to 8 and the number of ```tries``` is less than 50, we are asking the user to type a number once again. And then we add 1 to ```tries``` using the ```++``` operator.
+The ```&&``` symbol means and *and* it combines two conditions into one.
+
+In this ```while``` loop, while ```guess``` does not equal to 8 and the number of ```tries``` is less than 50, we are asking the user to type a number once again. And then we add 1 to ```tries``` using the ```++``` operator.	
 
 Source code for this program can be found in the [guess.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/3.%20Loops/guess.cpp) file.
 
