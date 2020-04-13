@@ -25,14 +25,10 @@ int main() {
   std::cout << "Enter your answer (1-4): ";
   std::cin >> answer1;
 
-  if (answer1 == 1)
-    hufflepuff++;
-  else if (answer1 == 2)
-    slytherin++;
-  else if (answer1 == 3)
-    ravenclaw++;
-  else if (answer1 == 4)
-    gryffindor++;
+  if (answer1 == 1) hufflepuff++;
+  else if (answer1 == 2) slytherin++;
+  else if (answer1 == 3) ravenclaw++;
+  else if (answer1 == 4)mgryffindor++;
 
   // ~~~~~~~~~~ Question 2 ~~~~~~~~~~
 
@@ -77,14 +73,10 @@ int main() {
   std::cout << "Enter your answer (1-4): ";
   std::cin >> answer3;
 
-  if (answer3 == 1)
-    slytherin++;
-  else if (answer3 == 2)
-    hufflepuff++;
-  else if (answer3 == 3)
-    ravenclaw++;
-  else if (answer3 == 4)
-    gryffindor++;
+  if (answer3 == 1) slytherin++;
+  else if (answer3 == 2) hufflepuff++;
+  else if (answer3 == 3) ravenclaw++;
+  else if (answer3 == 4) gryffindor++;
 
   // ~~~~~~~~~~ Question 4 ~~~~~~~~~~
 
@@ -98,14 +90,10 @@ int main() {
   std::cout << "Enter your answer (1-4): ";
   std::cin >> answer4;
 
-  if (answer4 == 1)
-    hufflepuff++;
-  else if (answer4 == 2)
-    slytherin++;
-  else if (answer4 == 3)
-    gryffindor++;
-  else if (answer4 == 4)
-    ravenclaw++;
+  if (answer4 == 1) hufflepuff++;
+  else if (answer4 == 2) slytherin++;
+  else if (answer4 == 3) gryffindor++;
+  else if (answer4 == 4) ravenclaw++;
 
   // ========== Sorting ==========
 
