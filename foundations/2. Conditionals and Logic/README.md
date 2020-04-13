@@ -259,6 +259,7 @@ For instance:
 - [Or](#Or)
 - [Not](#Not)
 - [Leap Year](#Leap-Year)
+- [Magic 8 ball](#Magic-Eight-Ball)
 
 ## Coin Flip
 
@@ -375,3 +376,88 @@ There are 3 criteria that must be taken into account to identify a leap year:
 - If that year is evenly divisible by 400, then it is a leap year.
 
 The source code for this program can be found in the [leap_year.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/leap_year.cpp) file.
+
+## Magic Eight Ball
+
+A simple program that will output a random fortune each time it executes.
+
+![alt text](https://s3.amazonaws.com/codecademy-content/courses/learn-cpp/conditionals-and-logic/magic8ball.gif)
+
+1. Create a skeleton for the program. Add:
+
+```
+#include <iostream>
+
+int main() {
+
+  // Your future is here
+
+}
+```
+
+2. The first line should be the same across all executions, so let’s output the phrase ```MAGIC 8-BALL:```.
+
+3. Similar to the Coin Flip program, we need to generate a random number.
+
+C++ has a ```std::rand()``` function from **cstdlib** that generates a random number.
+
+For example, if you add ```#include <cstdlib>```, you can use the ```std::rand()``` function:
+
+```
+std::cout << std::rand() << "\n";
+std::cout << std::rand() << "\n";
+std::cout << std::rand() << "\n";
+```
+
+It would output something like:
+
+```
+1804289383
+846930886
+1681692777
+```
+
+So, create an ```int``` variable and set it equal to a random number:
+
+```
+int answer = std::rand();
+```
+
+And output it in the terminal.
+
+Don’t forget to add ```#include <cstdlib>``` at the top.
+
+4. There are 20 different text outputs in the official Magic 8-Ball, but let’s write your own. And let’s do 10 of them.
+
+So we don’t just want any random number. We want a random number from 0-9.
+
+Change your ```answer``` to:
+```
+int answer = std::rand() % 10;
+```
+
+The ```%``` is the modulo symbol that returns the remainder.
+
+5. If you run the program a bunch of times, you will realize that ```answer``` doesn’t change.
+
+For our program to work, we need to get a different random number for each execution.
+
+To do so, we need to add this line of code before the declaration of ```answer```:
+```
+srand(time(NULL));
+```
+
+This sets the “seed” of the random number generator.
+
+6. Write an ```if``` statement where if ```answer``` is equal to 0, your program outputs the phrase ```It is certain.```
+
+7. Write an ```else``` statement for the 10th answer.
+
+8. And now do the same for the 8 other answers using ```else if```s.
+
+9. Try writing the program using a switch statement instead. 
+
+Sample source code for this program using else statements can be found in the [magic8.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/magic8.cpp) file.
+
+Sample source code for this program using a switch statement can be found in the [magic8_switch.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/magic8_switch.cpp) file.
+
