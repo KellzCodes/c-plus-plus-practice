@@ -4,7 +4,7 @@ A loop is a programming tool that repeats some code or a set of instructions unt
 
 When we see that a process has to repeat multiple times in a row, we write a loop. Loops allow us to create efficient code that automates processes to make scalable, manageable programs.
 
-![alt text](https://s3.amazonaws.com/codecademy-content/courses/learn-cpp/loops/roundabout.gif)
+![alt text](https://i345.photobucket.com/albums/p390/keldavis5/roundabout_zpsflm1yu8e.gif)
 
 ## While Loop
 
