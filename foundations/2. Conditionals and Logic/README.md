@@ -293,9 +293,9 @@ Example code is found in the [grade.cpp](https://github.com/keldavis/c-plus-plus
 ## pH
 In chemistry, [pH](https://en.wikipedia.org/wiki/PH) is a scale used to specify the acidity or basicity of an aqueous solution.
 1. Write an if, else if, else statement that:
-- If ```ph``` is greater than 7, output “Basic”.
-- If ```ph``` is less than 7, output “Acidic”.
-- If neither, output “Neutral”.
+  - If ```ph``` is greater than 7, output “Basic”.
+  - If ```ph``` is less than 7, output “Acidic”.
+  - If neither, output “Neutral”.
 
 Source code for this program can be found in the [ph.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/ph.cpp) file.
 
@@ -305,9 +305,9 @@ A pokemon identification program that makes use of a switch statement.
 ![alt text](https://media3.giphy.com/media/DfPZI9D6kRij6/giphy.webp?cid=ecf05e47a80816f7303d1aa1ad7c31cc241623c9635c5f24&rid=giphy.webp)
 
 1. Open the [pokedex.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/pokedex.cpp) file and add 3 more cases to the switch statement right before ```default```:
-- ```case 10``` that outputs “Pidgey”
-- ```case 11``` that outputs “Pidgeotto”
-- ```case 12``` that outputs “Pidgeot”
+  - ```case 10``` that outputs “Pidgey”
+  - ```case 11``` that outputs “Pidgeotto”
+  - ```case 12``` that outputs “Pidgeot”
 
 ## Space
 
@@ -317,16 +317,16 @@ A program that helps keep track of weight and BMI on different planets.
 2. Ask the user to enter a number for the planet they want to visit.
 3. The program should compute the user's weight on the destination planet.
 
-Here is the table of conversion:
+  Here is the table of conversion:
 
-| # | Planet  | Relative Gravity |
-|---|---------|------------------|
-| 1 | Venus   | 0.78             |
-| 2 | Mars    | 0.39             |
-| 3 | Jupiter | 2.65             |
-| 4 | Saturn  | 1.17             |
-| 5 | Uranus  | 1.05             |
-| 6 | Neptune | 1.23             |
+  | # | Planet  | Relative Gravity |
+  |---|---------|------------------|
+  | 1 | Venus   | 0.78             |
+  | 2 | Mars    | 0.39             |
+  | 3 | Jupiter | 2.65             |
+  | 4 | Saturn  | 1.17             |
+  | 5 | Uranus  | 1.05             |
+  | 6 | Neptune | 1.23             |
 
 The source code can be found in the [space.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/space.cpp) file. 
 
@@ -374,10 +374,10 @@ Write a **leap_year.cpp** program that:
 2. Checks to see if the year is a four-digit number.
 3. Displays whether or not the year falls on a [leap year](https://en.wikipedia.org/wiki/Leap_year).
 
-There are 3 criteria that must be taken into account to identify a leap year:
-- If the year can be evenly divided by 4 then it is a leap year, however…
-- If that year can be evenly divided by 100, and it is not evenly divided by 400, then it is NOT a leap year.
-- If that year is evenly divisible by 400, then it is a leap year.
+  There are 3 criteria that must be taken into account to identify a leap year:
+  - If the year can be evenly divided by 4 then it is a leap year, however…
+  - If that year can be evenly divided by 100, and it is not evenly divided by 400, then it is NOT a leap year.
+  - If that year is evenly divisible by 400, then it is a leap year.
 
 The source code for this program can be found in the [leap_year.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/leap_year.cpp) file.
 
@@ -641,4 +641,4 @@ int main() {
 
   This also outputs the House.
 
-A sample code can be found can be found in the [sortinghat.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/sortinghat.cpp) file.
+Sample code can be found can be found in the [sortinghat.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/sortinghat.cpp) file.
