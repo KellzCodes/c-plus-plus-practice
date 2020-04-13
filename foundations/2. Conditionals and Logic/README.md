@@ -264,6 +264,7 @@ For instance:
 - [Leap Year](#Leap-Year)
 - [Magic 8 ball](#Magic-Eight-Ball)
 - [Harry Potter Sorting Hat Quiz](#Harry-Potter-Sorting-Hat-Quiz)
+- [Rock, Paper, Scissors, Lizard, Spock](#Rock-Paper-Scissors-Lizard-Spock)
 
 ## Coin Flip
 
@@ -643,7 +644,7 @@ int main() {
 
 Sample code can be found can be found in the [sortinghat.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/sortinghat.cpp) file.
 
-## Rock, Paper, Scissors, Lizard, Spock
+## Rock Paper Scissors Lizard Spock
 
 The infamous game brought to popularity with the TV show [The Big Bang Theory](https://www.youtube.com/watch?v=iSHPVCBsnLw).
 
