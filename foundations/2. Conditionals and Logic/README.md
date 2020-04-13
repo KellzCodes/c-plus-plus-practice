@@ -457,7 +457,7 @@ This sets the “seed” of the random number generator.
 
 9. Try writing the program using a switch statement instead. 
 
-Sample source code for this program using else statements can be found in the [magic8.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/magic8.cpp) file.
+Sample source code for this program using ```else``` statements can be found in the [magic8.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/magic8.cpp) file.
 
-Sample source code for this program using a switch statement can be found in the [magic8_switch.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/magic8_switch.cpp) file.
+Sample source code for this program using a ```switch``` statement can be found in the [magic8_switch.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/magic8_switch.cpp) file.
 
