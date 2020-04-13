@@ -28,7 +28,7 @@ int main() {
   if (answer1 == 1) hufflepuff++;
   else if (answer1 == 2) slytherin++;
   else if (answer1 == 3) ravenclaw++;
-  else if (answer1 == 4)mgryffindor++;
+  else if (answer1 == 4) gryffindor++;
 
   // ~~~~~~~~~~ Question 2 ~~~~~~~~~~
 
