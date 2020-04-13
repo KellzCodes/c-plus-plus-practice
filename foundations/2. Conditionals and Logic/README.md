@@ -272,7 +272,7 @@ The program simulates a coin toss:
 - 50% of the time, it’s Heads.
 - 50% of the time, it’s Tails.
 
-![alt text](https://s3.amazonaws.com/codecademy-content/courses/learn-cpp/conditionals-and-logic/coinflip.gif)
+![alt text](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/coin_flip.gif)
 
 1. Open the [coinflip.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/coinflip.cpp) file and run the program five times to see an ```if``` ```else``` statement in action. See how many times it goes Heads.
 
@@ -303,7 +303,7 @@ Source code for this program can be found in the [ph.cpp](https://github.com/kel
 ## Pokedex
 A pokemon identification program that makes use of a switch statement.
 
-![alt text](https://media3.giphy.com/media/DfPZI9D6kRij6/giphy.webp?cid=ecf05e47a80816f7303d1aa1ad7c31cc241623c9635c5f24&rid=giphy.webp)
+![alt text](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/pokedex.webp)
 
 1. Open the [pokedex.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/pokedex.cpp) file and add 3 more cases to the switch statement right before ```default```:
   - ```case 10``` that outputs “Pidgey”
@@ -386,7 +386,7 @@ The source code for this program can be found in the [leap_year.cpp](https://git
 
 A simple program that will output a random fortune each time it executes.
 
-![alt text](https://s3.amazonaws.com/codecademy-content/courses/learn-cpp/conditionals-and-logic/magic8ball.gif)
+![alt text](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/magic-8-ball.gif)
 
 1. Create a skeleton for the program. Add:
 
@@ -470,7 +470,7 @@ Sample source code for this program using a ```switch``` statement can be found 
 
 The Sorting Hat is a talking hat at Hogwarts that magically determines which of the four school Houses.
 
-![alt text](https://s3.amazonaws.com/codecademy-content/courses/learn-cpp/conditionals-and-logic/harrypotter.gif)
+![alt text](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/harry-potter.gif)
 
 1. create a skeleton for the program:
   ```
@@ -648,7 +648,7 @@ Sample code can be found can be found in the [sortinghat.cpp](https://github.com
 
 The infamous game brought to popularity with the TV show [The Big Bang Theory](https://www.youtube.com/watch?v=iSHPVCBsnLw).
 
-![alt text](https://s3.amazonaws.com/codecademy-content/courses/learn-cpp/conditionals-and-logic/RPSLS.gif)
+![alt text](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/rpsls.gif)
 
 1. create a skeleton for the program. Add:
   ```
