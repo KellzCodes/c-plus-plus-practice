@@ -215,12 +215,13 @@ It returns ```true``` when the condition on the left is ```true``` or the condit
 
 Here’s the truth table:
 
-| a     | b     | a||b  |
-|-------|-------|-------|
-| false | false | false |
-| false | true  | true  |
-| true  | false | true  |
-| true  | true  | true  |
+
+| a     | b     | a or b |
+|-------|-------|--------|
+| false | false | false  |
+| false | true  | true   |
+| true  | false | true   |
+| true  | true  | true   |
 
 
 
