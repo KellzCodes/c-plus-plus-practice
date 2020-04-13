@@ -6,6 +6,7 @@ Here is a quick run down of the lessons found in the foundations folder.
 - [Introduction](#Introduction)
 - [Conditionals and Logic](#Conditionals-and-Logic)
 - [Loops](#Loops)
+- [Errors](#Errors)
 
 ## Introduction
 - [Hello World](#Hello-World)
@@ -329,3 +330,10 @@ for (int i = 0; i < 10; i++) {
   
 }
 ```
+
+## Errors
+
+- **Compile-time errors**: Errors found by the compiler.
+- **Link-time errors**: Errors found by the linker when it is trying to combine object files into an executable program.
+- **Run-time errors**: Errors found by checks in a running program.
+- **Logic errors**: Errors found by the programmer looking for the causes of erroneous results.
