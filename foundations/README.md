@@ -298,7 +298,7 @@ if (!tired) {
 
 ## Loops
 
-### While Loop
+#### While Loop
 
 A ```while``` loop statement repeatedly executes the code block within as long as the condition is ```true```. The moment the condition becomes ```false```, the program will exit the loop.
 
@@ -313,7 +313,7 @@ while (password != 1234) {
 }
 ```
 
-### For Loop
+#### For Loop
 
 A ```for``` loop executes a code block a specific number of times. It has three parts:
 - The initialization of a counter
