@@ -642,3 +642,64 @@ int main() {
   This also outputs the House.
 
 Sample code can be found can be found in the [sortinghat.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/sortinghat.cpp) file.
+
+## Rock, Paper, Scissors, Lizard, Spock
+
+The infamous game brought to popularity with the TV show [The Big Bang Theory](https://www.youtube.com/watch?v=iSHPVCBsnLw).
+
+![alt text](https://s3.amazonaws.com/codecademy-content/courses/learn-cpp/conditionals-and-logic/RPSLS.gif)
+
+1. create a skeleton for the program. Add:
+  ```
+  #include <iostream>
+
+  int main() {
+
+    // Live long and prosper
+
+  }
+  ```
+
+2. In this program, we need a random number for the computer’s choice and we also need to declare an int variable called user for the user’s choice.
+
+  So add this line of code at the top:
+
+  ```
+  #include <stdlib.h>
+  And the code below in main():
+
+  srand (time(NULL));
+
+  int computer = rand() % 3 + 1;
+
+  int user = 0;
+  Now we have a random number that could be 1, 2, or 3 for the computer. And we also have a variable for user’s input.
+  ```
+
+3. Before moving on, let’s compile and execute using the terminal to make sure there are no bugs.
+
+4. We can do something like:
+  
+  ```
+  std::cout << "====================\n";
+  std::cout << "rock paper scissors!\n";
+  std::cout << "====================\n";
+
+  std::cout << "1) ✊\n";
+  std::cout << "2) ✋\n";
+  std::cout << "3) ✌️\n";
+
+  std::cout << "shoot! ";
+  ```
+
+5. Grab user’s input using ```std::cin``` and store it into ```user```.
+
+6. Now we have both the user’s choice and the computer’s randomized choice, let’s use conditionals & logic to determine the winner.
+
+  Make sure to jot down the logic of Rock Paper Scissors on a piece of paper before you start coding.
+
+  Take your time!
+
+Sample code for Rock, Paper, Scissors program can be found in the [RPS.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/RPS.cpp) file.
+
+Sample code for Rock, Paper, Scissors, Lizard, Spock program can be found in the [RPSLS.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/2.%20Conditionals%20and%20Logic/RPSLS.cpp) file.
