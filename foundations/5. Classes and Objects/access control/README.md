@@ -78,4 +78,4 @@ std::string Song::get_title() {
 
 	Now retrieve and print out the ```electric_relaxation```‘s ```artist``` using ```.get_artist()```.
 
-Example code can be found in the [music.cpp](), [song.hpp](), and [song.cpp]() files.
+Example code can be found in the [music.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/5.%20Classes%20and%20Objects/access%20control/music.cpp), [song.hpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/5.%20Classes%20and%20Objects/access%20control/song.hpp), and [song.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/5.%20Classes%20and%20Objects/access%20control/song.cpp) files.
