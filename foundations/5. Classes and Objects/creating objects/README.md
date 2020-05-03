@@ -61,4 +61,4 @@ std::string Song::get_title() {
 
 4. Use ```.get_title()``` to retrieve ```electric_relaxation```'s title and print it to the terminal.
 
-Example code can be found in the [music.cpp]() file.
+Example code can be found in the [music.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/5.%20Classes%20and%20Objects/creating%20objects/music.cpp) file.
