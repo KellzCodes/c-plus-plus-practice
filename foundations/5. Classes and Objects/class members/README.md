@@ -32,3 +32,5 @@
 
 	- ```Song::add_title()``` should set title to ```new_title```.
 	- ```Song::get_title()``` should return ```title```.
+
+Example code can be found in the [song.hpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/5.%20Classes%20and%20Objects/class%20members/song.hpp) and [song.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/5.%20Classes%20and%20Objects/class%20members/song.cpp) files.
