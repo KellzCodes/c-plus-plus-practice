@@ -73,9 +73,14 @@ std::string Song::get_artist() {
 }
 ```
 
-2. Hmm… a song probably only needs to be given a title and artist once. Now that you can set those attributes with a constructor, go ahead and remove ```.add_title()``` and ```.add_artist()``` from **song.hpp** and **song.cpp**.
+2. Declare a public constructor for ```Song``` in **song.hpp**. Give it two ```std::string``` parameters:
 
-3. Let’s try out your new constructor!
+	- ```new_title```
+	- ```new_artist``` Then define the constructor inside **song.cpp**. Initialize ```title``` to ```new_title``` and ```artist``` to ```new_artist```.
+
+3. Hmm… a song probably only needs to be given a title and artist once. Now that you can set those attributes with a constructor, go ahead and remove ```.add_title()``` and ```.add_artist()``` from **song.hpp** and **song.cpp**.
+
+4. Let’s try out your new constructor!
 
 	In ```main()```, instantiate a new ```Song``` called ```back_to_black```. Give it:
 
