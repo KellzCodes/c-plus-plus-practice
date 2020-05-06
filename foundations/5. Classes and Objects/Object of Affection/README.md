@@ -2,7 +2,7 @@
 
 Your friend is building a new match-making service: The Object of Your Affection or OOYA for short (don’t worry, you still have time to convince them to change the name).
 
-![alt text](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/5.%20Classes%20and%20Objects/ooya.gif)
+![alt text](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/5.%20Classes%20and%20Objects/Object%20of%20Affection/ooya.gif)
 
 With your new understanding of C++ objects and classes, your friend thought you could build a pretty well-organized system of dating profiles.
 
