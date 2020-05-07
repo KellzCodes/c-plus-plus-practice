@@ -28,7 +28,7 @@ However, references and pointers are also sometimes considered two of the most c
 
 So let’s get started.
 
-### References
+## References
 
 In C++, a *reference* variable is an alias for something else, that is, another name for an already existing variable.
 
@@ -51,7 +51,7 @@ Two things to note about references:
 
 Example code can be found in the [references](https://github.com/keldavis/c-plus-plus-practice/tree/master/foundations/6.%20References%20and%20Pointers/references) file.
 
-### Pass By Reference
+## Pass By Reference
 
 So what’s a good use case for references? Let’s take a look.
 
