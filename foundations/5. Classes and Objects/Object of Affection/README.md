@@ -133,4 +133,4 @@ Let’s get started!
 	
 	Now compile and execute your code!
 
-Example code can be found in the [app.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/5.%20Classes%20and%20Objects/Object%20of%20Affection/app.cpp), [profile.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/5.%20Classes%20and%20Objects/Object%20of%20Affection/profile.cpp), [profile.hpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/5.%20Classes%20and%20Objects/Object%20of%20Affection/profile.hpp) files.
+Example code can be found in the [app.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/5.%20Classes%20and%20Objects/Object%20of%20Affection/app.cpp), [profile.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/5.%20Classes%20and%20Objects/Object%20of%20Affection/profile.cpp), and [profile.hpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/5.%20Classes%20and%20Objects/Object%20of%20Affection/profile.hpp) files.
