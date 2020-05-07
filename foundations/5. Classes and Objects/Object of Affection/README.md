@@ -74,14 +74,16 @@ Let’s get started!
 	Define the constructor in **profile.cpp** and assign the attributes the values passed in. (Don’t give ```pronouns``` a default value in the definition.)
 
 	Name each parameter something different than its corresponding attribute. For example, this will work:
-```
-	population = new_population;
-```
+
+	
+	```population = new_population;```
+
+	
 	But this won’t:
 
-```
-	population = population;
-```
+
+	```population = population;```
+
 
 7. Time to test your code out!
 
