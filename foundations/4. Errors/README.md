@@ -14,6 +14,7 @@ In C++, there are many different ways of classifying errors, but they can be boi
 - [Link Time Errors](#Link-Time_Errors)
 - [Run Time Errors](#Run-Time-Errors)
 - [Logic Errors](#Logic-Errors)
+- [Review](#Review)
 - [Basic Programs](#Basic-Programs)
 
 
@@ -98,6 +99,20 @@ Some common logic errors:
 
 **Note**: Logic errors don’t have error messages. Sometimes, programmers use a process called [test-driven development (TDD)](https://en.wikipedia.org/wiki/Test-driven_development), a way to give logic errors error messages and save yourself a lot of headaches!
 
+### Review
+
+Finding bugs is a huge part of a programmer’s life. Don’t be intimidated by them… embrace them. Errors in your code mean you’re trying to do something cool!
+
+In this lesson, we have learned about the four types of C++ errors:
+
+- **Compile-time errors**: Errors found by the compiler.
+- **Link-time errors**: Errors found by the linker when it is trying to combine object files into an executable program.
+- **Run-time errors**: Errors found by checks in a running program.
+- **Logic errors**: Errors found by the programmer looking for the causes of erroneous results.
+
+Remember, [Google](https://www.google.com/) and [Stack Overflow](https://www.stackoverflow.com/) are a programmer’s best friends. For some more motivation, check out this blog post: [Thinking About Errors in Your Code Differently](https://news.codecademy.com/errors-in-code-think-differently).
+
+We wish you the best of luck in your bug-squashing journey.
 
 # Basic Programs
 
