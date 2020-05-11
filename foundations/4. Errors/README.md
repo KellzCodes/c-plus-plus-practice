@@ -13,6 +13,7 @@ In C++, there are many different ways of classifying errors, but they can be boi
 - [Compile Time Errors](#Compile-time-Errors)
 - [Link Time Errors](#Link-Time_Errors)
 - [Run Time Errors](#Run-Time-Errors)
+- [Logic Errors](#Logic-Errors)
 - [Basic Programs](#Basic-Programs)
 
 
@@ -82,12 +83,28 @@ Here’s an example of a run-time error message:
 
 ![alt text](https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/4.%20Errors/run-time-error.png)
 
+### Logic Errors
+
+Once we have removed the compile-time errors, link-time errors, and run-time errors, the program runs successfully. But sometimes, the program doesn’t do what we want it to do or no output is produced. Hmmm…
+
+These types of errors which provide incorrect output, but appears to be error-free, are called logical errors. These are one of the most common errors that happen to beginners and also usually the most difficult to find and eliminate.
+
+Logical errors solely depend on the logical thinking of the programmer. Your job now is to figure out why the program didn’t do what you wanted it to do.
+
+Some common logic errors:
+
+- Program logic is flawed
+- Some “silly” mistake in an ```if``` statement or a ```for```/```while``` loop
+
+**Note**: Logic errors don’t have error messages. Sometimes, programmers use a process called [test-driven development (TDD)](https://en.wikipedia.org/wiki/Test-driven_development), a way to give logic errors error messages and save yourself a lot of headaches!
+
 
 # Basic Programs
 
 - [Compile Error Demo](#Compile-Error_Demo)
 - [Link Time Error Demo](#Link-Time-Error-Demo)
 - [Run Time Error Demo](#Run-TIme-Error_Demo)
+- [Logic Error Demo](#Logic-Error-Demo)
 
 
 ## Compile Error Demo
@@ -116,3 +133,33 @@ A run time error demo program
 
 2. There’s a run-time error in **ratio.cpp**. This program is supposed to find the ratio of a table’s dimensions, which is supposed to be 20 x 30
 
+## Logic Error Demo
+
+1. Take a look at the following code:
+
+```
+#include <iostream>
+
+int main() {
+  
+  // Output from 1 to steps:
+  
+  int steps = 10;
+  
+  for (int i = 0; i <= steps; i++) {
+    
+    std::cout << "Step #";
+    std::cout << i << "\n";
+    
+  }
+  
+}
+```
+
+2. Compile and execute the above code. There should be no error messages.
+
+	But the program is supposed to output steps from #1 - #10. The program is somehow starting from 0…
+
+	Find the logic error.
+
+**Hint**: Take a look at where ```i``` starts.
