@@ -42,7 +42,7 @@ If they are equal, add the character to the result vector using .push_back().
   }
   
   /*
-  for loop that goes through the result vector and outputs each of the elements.
+  for loop that goes through the result vector and outputs each of the elements
   */
   for (int k = 0; k < whale_talk.size(); k++) {
     
