@@ -27,7 +27,7 @@ int main() {
 
 2. You work with emergency services in Britain and the emergency number just changed:
 
-	<iframe width="380" height="315" src="https://www.youtube.com/embed/HWc3WY3fuZU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<img src="https://www.youtube.com/embed/HWc3WY3fuZU" alt="parameter args" width="500"/>
 
 	Yikes! That’s a big change. What if the number changes again?
 
