@@ -25,11 +25,7 @@ int main() {
 }
 ```
 
-2. You work with emergency services in Britain and the emergency number just changed:
-
-	<img src="https://www.youtube.com/embed/HWc3WY3fuZU" alt="parameter args" width="500"/>
-
-	Yikes! That’s a big change. What if the number changes again?
+2. You work with emergency services in Britain and the emergency number just changed.
 
 	Let’s build a function that prints out the current emergency number, whatever it is from now on.
 
