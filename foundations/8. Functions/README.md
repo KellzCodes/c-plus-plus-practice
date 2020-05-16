@@ -1,6 +1,17 @@
 # Functions
 #### C++ functions allow you to use the same code statements over and over without repeating yourself.
 
+- [Built-in Functions](#Built-in-Functions)
+- [Declare & Define](#Declare-and-Define)
+- [Void Method](#Void-Method)
+- [Return Types](#Return-Types)
+- [How Return Values Work](#How-Return-Values-Work)
+- [Parameters & Arguments](#Parameters-and-Arguments)
+- [Tackling Multiple Arguments](#Tackling-Multiple-Arguments)
+- [How Parameters & Arguments Work](#How-Parameters-and-Arguments-Work)
+- [Review](#Review)
+- [Code Challenge](#Code-Challenge)
+
 As a programmer, you will find yourself reusing the same blocks of code over and over throughout your program. In times like these, you can turn to functions.
 
 Also known as a method or procedure, a *function* is a named group of code statements that accomplish something together, a bit like a factory machine.
@@ -18,3 +29,273 @@ In fact, every C++ program has at least one function. “Hold on,” you may be 
 Well, as it happens, ```main()``` is a function that you’ve already used! And you’ll understand it a bit more as you learn how functions work.
 
 Example code can be found in the [Intro to Functions](https://github.com/keldavis/c-plus-plus-practice/tree/master/foundations/8.%20Functions/Intro%20to%20Functions) folder.
+
+## Built in Functions
+
+Before we learn how to create functions, let’s go over some built-in functions…
+
+C++ comes chock-full of functions that are already created as part of the standard library. But how do we access this hidden hoard of helpful functions? We gain access to various functions by including headers like ```<cmath>``` or ```<string>```.
+
+In fact, you may already have used a couple functions without even knowing it! With the following header:
+
+```
+#include <cmath>
+```
+
+We gain the power to call ```sqrt()``` to find the square root of any number.
+
+Wait, “call” ```sqrt()```?
+
+*Calling* a function is how we get a function to take action. To call a basic function, we just need the function name followed by a pair of parentheses like ```sqrt(9)```. For example:
+
+```
+std::cout << sqrt(9) << "\n";
+
+// This would output 3
+```
+
+Example code can be found in the [Built-in Functions](https://github.com/keldavis/c-plus-plus-practice/tree/master/foundations/8.%20Functions) folder.
+
+## Declare and Define
+
+Often, built-in functions aren’t enough to tackle the wide array of programming challenges out there. But never fear: you can write your own functions too!
+
+A C++ function is comprised of two distinct parts:
+
+- *Declaration*: this includes the function’s name, what the return type is, and any parameters (if the function will accept input values, known as arguments).
+- *Definition*: also known as the *body* of the function, this contains the instructions for what the function is supposed to do.
+
+```
+This is the overall structure:
+
+return_type function_name( any, parameters, you, have ) {
+
+   // Code block here
+
+   return output_if_there_is_any;
+
+}
+```
+
+This is what it might look like with real code:
+
+```
+void make_sandwich() {
+
+  std::cout << "bread\n";
+  std::cout << "egg\n";
+  std::cout << "cheese\n";
+  std::cout << "avocado\n";
+  std::cout << "bread\n";
+
+}
+```
+
+Watch how the ```make_sandwich()``` function gets executed step by step:
+
+<img src="https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/8.%20Functions/void-cpp-functions.gif" alt="void function" width="500"/>
+
+## Void Method
+
+Let’s build a simple function with no input and no output. We can do that?
+
+Enter the ```void``` specifier, which is added in the function declaration before the function name. A ```void``` function, also known as a subroutine, has no return value, making it ideally suited for situations where you just want to print stuff to the terminal.
+
+For example:
+
+```
+void animal_chat() {
+
+  std::string fav, pet;
+
+  std::cout << "What's your favorite animal?\n";
+  std::cin >> fav;
+
+  std::cout << "Do you have a " << fav << " as a pet? y/n\n";
+  std::cin >> pet;
+
+  if (pet == "y") {
+
+    std::cout << "How lucky you have a " << fav << " as a pet!\n";
+
+  } else {
+
+    std::cout << "That's too bad.\n";
+
+  }
+
+}
+```
+
+The above chat program is built to capture user responses and print to the terminal without returning any values.
+
+Example code can be found in the [Void Method](https://github.com/keldavis/c-plus-plus-practice/tree/master/foundations/8.%20Functions/Void%20Method) folder
+
+## Return Types
+
+When you do in fact want your function to return something and pass information back to the rest of your program, C++ has you covered. Just like there are many variable types, there are many different return types for functions.
+
+A function can return most data types we’ve covered, including ```double```, ```int```, ```bool```, ```char```, ```std::string```, and ```std::vector```.
+
+```
+std::string always_blue() {
+
+  return "blue!\n";
+
+}
+```
+
+**Note**: The return statement is the last line of code that a function will execute. For example:
+
+```
+std::string always_blue() {
+
+  return "blue!\n";
+
+  std::cout << "Returned blue!";
+
+}
+```
+
+The final line will not execute because a value has already been returned. So ```"Returned blue!"``` won’t be printed to the terminal.
+
+Example code can be found in the [Return Types](https://github.com/keldavis/c-plus-plus-practice/tree/master/foundations/8.%20Functions/Return%20Types) folder.
+
+## How Return Values Work
+
+When functions have a return type other than ```void```, the function has two new requirements:
+
+- There must be a value returned from the function.
+- The return value must be the same type as the function’s return type.
+
+But where does the return value get returned to?
+
+It gets returned to the place where the function is called. For example, if you have the following function:
+
+```
+std::string feed_the_cat() {
+
+  return "Cat is fed!";
+
+}
+```
+
+And then print the function call inside of ```main()```:
+
+```
+int main() {
+
+  std::string cat_message = feed_the_cat();
+  std::cout << cat_message;
+
+}
+```
+
+The return value of the function is what gets printed to the terminal.
+
+Watch how ```make_sandwich()``` passes its return value back to the function call in ```main()```:
+
+<img src="https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/8.%20Functions/cpp-function-return-types.gif" alt="return types" width="500"/>
+
+## Parameters and Arguments
+
+Returning data is all well and good, but let’s say you’re visiting NYC and you’ve been told that New Yorkers usually add a 20% tip for restaurants and taxis. It would be really convenient if you could just build a function that accepted different prices as input and figured out how much you should tip.
+
+As it happens, you can do that with parameters. *Parameters* (sometimes called *formal parameters*) are variables used in a function’s definition. They act as placeholders for the input values you’ll use during your function call.
+
+<img src="https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/8.%20Functions/cpp-functions-params-args-small.gif" alt="parameter args" width="500"/>
+
+In the function below, ```price``` is the function’s parameter and it’s a double. It is declared between the parentheses and then used in the body of the function.
+
+```
+double get_tip(double price) {
+
+  return price * 0.2;
+
+}
+```
+
+Then, when you’re ready to use your function, the value you pass to the function is called an *argument* (also known as an *actual parameter*). In this case, ```15.75``` is the argument that is passed to the function:
+
+```
+double tip = get_tip(15.75);
+// tip would be 3.15
+```
+
+Example code can be found in the [Parameters and Arguments](https://github.com/keldavis/c-plus-plus-practice/tree/master/foundations/8.%20Functions/Parameters%20and%20Arguments) folder.
+
+## Tackling Multiple Arguments
+
+Hang on, you may be thinking, are you limited to one parameter per function? Not at all! You can add as many as you like, but you will have to remember their order when you call the function.
+
+```
+double get_tip(double price, double tip, bool total_included) {
+
+  if (total_included) {
+
+    return price * tip + price;
+
+  } else {
+
+    return price * tip;
+
+  }
+
+}
+```
+
+So here we have three parameters:
+
+- ```double price```
+- ```double tip```
+- ```bool total_included```
+
+When calling ```get_tip()```, it’s important to call it with ```price``` first, ```tip``` second, and ```return_total``` last:
+
+```
+get_tip(0.25, true, 45.50);
+// this code will not work
+```
+
+```
+get_tip(45.50, 0.25, true);
+// this code results in 56.875, which you could round up to 56.88
+```
+
+Example code can be found in the [Tackling Multiple Arguments](https://github.com/keldavis/c-plus-plus-practice/tree/master/foundations/8.%20Functions/Tackling%20Multiple%20Arguments) folder
+
+## How Parameters and Arguments Work
+
+A function with parameters has a couple of requirements:
+
+- The function call must include the **same number** of arguments as there are parameters.
+The corresponding arguments must be passed in the **same order**.
+
+By calling a function with arguments, you are telling a function, “Hey function, when you execute, use these values where you have parameters in your definition.”
+
+While it executes, anywhere the function comes across a parameter, it replaces the parameter with the corresponding argument you gave it.
+
+Take a look at how our updated ```make_sandwich()``` function executes when it gets called with ingredients as arguments:
+
+<img src="https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/8.%20Functions/cpp-functions-parameters.gif" alt="function" width="500"/>
+
+## Review
+
+Wow! Check out all you’ve learned about C++ functions:
+
+- A function is a named group of statements that do something together.
+- Functions allow you to create more flexible, modular, and DRY code.
+- C++ has many built-in functions that you can use.
+- Functions are called like ```function_name();```
+- A function has a declaration with a return type and possible parameters.
+- A function has a definition (or body) with a group of statements and a possible return value.
+- ```void``` functions do not have return values.
+- Functions with a return value have return statements.
+- Parameters are variables used as placeholders for function input values.
+- Arguments are a function’s actual input values.
+
+You now know enough C++ to create some pretty cool projects on your own. But, as you’ll see, there are still many ways to improve your code.
+
+# Code Challenge
+
+Practice building C++ functions! Exercises and example code can be found in the [Code Challenge](https://github.com/keldavis/c-plus-plus-practice/tree/master/foundations/8.%20Functions/Code%20Challenge) folder.
