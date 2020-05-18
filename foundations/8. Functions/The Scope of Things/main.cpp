@@ -1,7 +1,7 @@
 #include <iostream>
 
 void enter_code(int passcode) {
-  std::string secret_knowledge = "https://s3.amazonaws.com/codecademy-content/courses/regex/onyourexcitingjourneylearningtocodeyouwillfindthis.gif";
+  std::string secret_knowledge = "https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/8.%20Functions/The%20Scope%20of%20Things/onyourexcitingjourneylearningtocodeyouwillfindthis.gif";
 
   
   if (passcode == 0310) {
