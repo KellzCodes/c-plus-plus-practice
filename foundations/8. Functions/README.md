@@ -1,16 +1,19 @@
 # Functions
 #### C++ functions allow you to use the same code statements over and over without repeating yourself.
 
-- [Built-in Functions](#Built-in-Functions)
-- [Declare & Define](#Declare-and-Define)
-- [Void Method](#Void-Method)
-- [Return Types](#Return-Types)
-- [How Return Values Work](#How-Return-Values-Work)
-- [Parameters & Arguments](#Parameters-and-Arguments)
-- [Tackling Multiple Arguments](#Tackling-Multiple-Arguments)
-- [How Parameters & Arguments Work](#How-Parameters-and-Arguments-Work)
-- [Review](#Review)
-- [Code Challenge](#Code-Challenge)
+- Function Basics
+  - [Built-in Functions](#Built-in-Functions)
+  - [Declare & Define](#Declare-and-Define)
+  - [Void Method](#Void-Method)
+  - [Return Types](#Return-Types)
+  - [How Return Values Work](#How-Return-Values-Work)
+  - [Parameters & Arguments](#Parameters-and-Arguments)
+  - [Tackling Multiple Arguments](#Tackling-Multiple-Arguments)
+  - [How Parameters & Arguments Work](#How-Parameters-and-Arguments-Work)
+  - [Review The Basics](#Review)
+  - [Code Challenge](#Code-Challenge)
+- [Scope and Flexibility](#Scope-and-Flexibility)
+  - [The Scope of Things](#The-Scope-of-Things)
 
 As a programmer, you will find yourself reusing the same blocks of code over and over throughout your program. In times like these, you can turn to functions.
 
@@ -296,6 +299,49 @@ Wow! Check out all you’ve learned about C++ functions:
 
 You now know enough C++ to create some pretty cool projects on your own. But, as you’ll see, there are still many ways to improve your code.
 
-# Code Challenge
+## Code Challenge
 
 Practice building C++ functions! Exercises and example code can be found in the [Code Challenge](https://github.com/keldavis/c-plus-plus-practice/tree/master/foundations/8.%20Functions/Code%20Challenge) folder.
+
+# Scope and Flexibility
+
+Expand beyond single-file programs with scope. Then make C++ functions more flexible using default parameters, overloading, and templates.
+
+## The Scope of Things
+
+Take a look at the program below. We have a ```void``` function named ```favorite_animal()``` and ```main()``` with a few statements inside.
+
+```
+#include <iostream>
+
+std::string sea_animal = "manatee";
+
+void favorite_animal(std::string best_animal) {
+
+  std::string animal = best_animal;
+  std::cout << "Best animal: " << animal << "\n";
+
+}
+
+int main() {
+
+  favorite_animal("jaguar");
+
+  std::cout << sea_animal << "\n";
+  std::cout << animal << "\n";
+
+}
+```
+
+When this program is compiled and executed, ```sea_animal``` will print, but ```animal``` won’t. Why do you think that’s the case?
+
+*Scope* is the region of code that can access or view a given element.
+
+- Variables defined in *global scope* are accessible throughout the program.
+- Variables defined in a function have *local scope* and are only accessible inside the function.
+
+```sea_animal``` was defined in global scope at the top of the program, outside of ```main()```. So ```sea_animal``` is defined everywhere in the program.
+
+Because ```animal``` was only defined within ```favorite_animal()``` and not returned, it is not accessible to the rest of the program.
+
+Example code can be found in the [The Scope of Things](https://github.com/keldavis/c-plus-plus-practice/tree/master/foundations/8.%20Functions/The%20Scope%20of%20Things) folder.
