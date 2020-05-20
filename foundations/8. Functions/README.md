@@ -384,3 +384,5 @@ g++ main.cpp my_functions.cpp
 ```
 
 And voila! Your program knows the function definitions.
+
+Example code can be found in the [Multi-File Programs](https://github.com/keldavis/c-plus-plus-practice/tree/master/foundations/8.%20Functions/Multi-File%20Programs) folder.
