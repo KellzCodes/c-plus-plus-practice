@@ -1,7 +1,8 @@
 # Default Arguments
 
 1. Start with this code:
-	**main.cpp**
+
+**main.cpp**
 
 ```
 #include <iostream>
@@ -25,13 +26,13 @@ int main() {
 }
 ```
 
-	**coffee.hpp**
+**coffee.hpp**
 
 ```
 std::string make_coffee(bool milk, bool sugar);
 ```
 
-	**coffee.cpp**
+**coffee.cpp**
 
 ```
 #include <string>
