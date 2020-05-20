@@ -15,6 +15,9 @@
 - [Scope and Flexibility](#Scope-and-Flexibility)
   - [The Scope of Things](#The-Scope-of-Things)
   - [Multi-File Programs](#Multi-File-Programs)
+  - [Header Files](#Header-Files)
+  - [Inline Functions](#Inline-Functions)
+  - [Default Arguments](#Default-Arguments)
 
 As a programmer, you will find yourself reusing the same blocks of code over and over throughout your program. In times like these, you can turn to functions.
 
@@ -386,3 +389,104 @@ g++ main.cpp my_functions.cpp
 And voila! Your program knows the function definitions.
 
 Example code can be found in the [Multi-File Programs](https://github.com/keldavis/c-plus-plus-practice/tree/master/foundations/8.%20Functions/Multi-File%20Programs) folder.
+
+## Header Files
+
+If your program keeps growing, you may have to scroll through many declarations before you see ```main()```. That doesn’t seem like the best way to do things. Plus you don’t want to keep declaring the same functions over and over for different files — making changes would be incredibly tiresome!
+
+Well, you can take those function declarations and move them all over to a *header file*, another file — usually with the same name as the file with all of the function definitions — with the extension **.hpp** or **.h**. For example, if your function definitions are in **my_functions.cpp**, the corresponding header file would be **my_functions.hpp** or **my_functions.h**.
+
+So how do you bring everything from a header file into scope for another file? Do you just link the header in the compilation statement like you did with the second **.cpp** file?
+
+As it turns out, with headers, you can just add ```#include "my_functions.hpp"``` to the very top of **main.cpp**:
+
+```
+#include "my_functions.hpp"
+```
+
+Boom! This line pastes in everything from **my_functions.hpp**. Now you have access to all of the function declarations you stowed away in your header.
+
+Example code can be found in the [Header Files](https://github.com/keldavis/c-plus-plus-practice/tree/master/foundations/8.%20Functions/Header%20Files) folder.
+
+## Inline Functions
+
+Once you set foot in the wild of C++ development, you may encounter the term “inline functions” with a couple different meanings. An *inline function* is a function definition, usually in a header file, qualified by ```inline``` like this:
+
+```
+inline 
+void eat() {
+
+  std::cout << "nom nom\n";
+
+}
+```
+
+Using ```inline``` advises the compiler to insert the function’s body where the function call is, which sometimes helps with execution speed (and sometimes hinders execution speed). If you do use it, we recommend testing how it affects the execution speed of your program. The bottom line is ```inline``` is something you’ll probably encounter, but may never use.
+
+However, you will sometimes also hear about “inline functions” that are just member functions (i.e. functions inside of classes) which have been defined and declared in a single line in a header file because the function body is so short:
+
+```
+// cookie_functions.hpp
+
+// eat() belongs to the Cookie class:
+void Cookie::eat() {std::cout << "nom nom\n";} 
+```
+
+Please note that you should ALWAYS add the ```inline``` keyword if you are inlining functions in a header (unless you are dealing with member functions, which are automatically inlined for you).
+
+Example code can be found in the [Inline Functions](https://github.com/keldavis/c-plus-plus-practice/tree/master/foundations/8.%20Functions/Inline%20Functions) folder.
+
+## Default Arguments
+
+If you add a parameter to a function in C++, then an argument will be required when you call the function. What does “required” mean here? Well, you’ll get an error. But what if 9 times out of 10, you know you’ll use the same input value? It would be really annoying to have to enter the same value over and over again.
+
+To make your code more flexible for situations like this, you can add *default arguments* to your function declarations. Default arguments are values assigned to parameters when the function is declared and defined:
+
+```
+// Declaration
+void intro(std::string name, std::string lang = "C++");
+
+// Definition
+void intro(std::string name, std::string lang) {
+  std::cout << "Hi, my name is "
+            << name
+            << " and I'm learning "
+            << lang
+            << ".\n";
+}
+```
+
+Then, if you leave the argument blank in your function call, instead of an error, your function will run with the default value. Meanwhile, if you DO have an argument to add when you call the function, that argument will replace the default argument when your code executes.
+
+Either of these will work for the function we defined:
+
+```
+intro("Mariel")
+// "Hi, my name is Mariel and I'm learning C++."
+```
+
+```
+intro("Mariel", "Python")
+// "Hi, my name is Mariel and I'm learning Python."
+```
+
+**Important**: Your computer cannot read your mind; it determines which argument corresponds with which parameter based on order.
+
+Parameters without default arguments come first. This will work for ```add_nums(3);``` because the computer knows ```3``` corresponds to ```num1```:
+
+```
+int add_nums(int num1, int num2 = 0);
+```
+
+But the following does NOT work for ```add_num(3);``` the computer assumes that ```3``` still corresponds to ```num1```:
+
+```
+int add_nums(int num1 = 0, int num2);
+```
+
+Similarly, when a function has two default arguments, you still need to call with both arguments — if BOTH of the following are true:
+
+- The first argument IS the default value.
+- The second argument is NOT the default value.
+
+Example code can be found in the [Default Arguments](https://github.com/keldavis/c-plus-plus-practice/tree/master/foundations/8.%20Functions/Default%20Arguments) folder
