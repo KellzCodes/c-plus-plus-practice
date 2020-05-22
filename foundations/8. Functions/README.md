@@ -18,6 +18,10 @@
   - [Header Files](#Header-Files)
   - [Inline Functions](#Inline-Functions)
   - [Default Arguments](#Default-Arguments)
+  - [Function Overloading](#Function-Overloading)
+  - [Function Templates](#Function-Templates)
+  - [Review Scope and Flexibility](#Review-Scope-and-Flexibility)
+- [UFO Project](#UFO-Project)
 
 As a programmer, you will find yourself reusing the same blocks of code over and over throughout your program. In times like these, you can turn to functions.
 
@@ -490,3 +494,136 @@ Similarly, when a function has two default arguments, you still need to call wit
 - The second argument is NOT the default value.
 
 Example code can be found in the [Default Arguments](https://github.com/keldavis/c-plus-plus-practice/tree/master/foundations/8.%20Functions/Default%20Arguments) folder
+
+## Function Overloading
+
+What if you want a function to accept an argument that can be either an ```int``` OR a ```double```? Or what if you want some function parameters to be optional? C++ has a trick up its sleeve just for such situations.
+
+In a process known as *function overloading*, you can give multiple C++ functions the same name. Just make sure at least one of these conditions is true:
+
+- Each has different type parameters.
+- Each has a different number of parameters.
+
+Overloading enables you to change the way a function behaves depending on what is passed in as an argument:
+
+```
+void print_cat_ears(char let) {
+  std::cout << " " << let << "   " << let << " " << "\n";
+  std::cout << let << let << let << " " << let << let << let << "\n";
+}
+
+void print_cat_ears(int num) {
+  std::cout << " " << num << "   " << num << " " << "\n";
+  std::cout << num << num << num << " " << num << num << num << "\n";
+}
+```
+
+Given the above functions, you could call the functions like so and C++ will know what to do:
+
+```
+print_cat_ears('A');
+print_cat_ears(4);
+```
+
+Output:
+
+```
+ A   A 
+AAA AAA
+
+ 4   4
+444 444
+```
+
+Example code can be found in the [Function Overloading](https://github.com/keldavis/c-plus-plus-practice/tree/master/foundations/8.%20Functions/Function%20Overloading) folder.
+
+## Function Templates
+
+Overloading can be really tedious. Imagine you want to create a new function that works with ```int```, ```float```, ```double```, and other number types. Do you really need to redefine the SAME function body over and over again with different parameters?
+
+Thankfully not! When two functions have different types but the same body — as was the case with ```print_cat_ears()``` —, there is a cleaner solution you can use: templates.
+
+A *template* is a C++ tool that allows programmers to add data types as parameters.
+
+This feature comes in handy for classes as well as for functions. In fact, ```std::string``` and ```std::vector``` are both template-based types. The [C++ standard library](https://en.cppreference.com/w/cpp/header) is full of templates!
+
+Take a look at how function templates allow you to use less code to make more than one function:
+
+<img src="https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/8.%20Functions/cpp-function-templates.gif" alt="function" width="500"/>
+
+#### How to Build Function Templates
+
+So how do we implement templates with actual code? Unlike regular functions, templates are entirely created in header files.
+
+Templates let us choose the type implementation right when you call the function. The type we choose may apply to the return type, a parameter type, or both.
+
+Here’s how we could build a template for ```print_cat_ears()``` so that the parameter type is flexible:
+
+```
+template <typename T>
+void print_cat_ears(T item) {
+
+  std::cout << " " << item << "   " << item << " " << "\n";
+  std::cout << item << item << item << " " << item << item << item << "\n";
+
+}
+```
+
+We can call the function for ```int```, ```char```, ```std::string```, or ```double```:
+
+```
+print_cat_ears(2);
+
+// the output:
+//  2   2
+// 222 222
+```
+
+Now we can use ```print_cat_ears()``` with a parameter of any type we want, as long as the type can be used with the methods expected. For example, we couldn’t pass an ```std::vector``` into the current ```print_cat_ears()``` because ```<<``` won’t work with ```std::vector```.
+
+**Note**: Using templates will slow down the program’s compile time, but speed up the execution time.
+
+Example code can be found in the [Function Templates](https://github.com/keldavis/c-plus-plus-practice/tree/master/foundations/8.%20Functions/Function%20Templates) folder.
+
+## Review Scope and Flexibility
+
+You’ve learned quite a bit! You now know a bit about how scope works for functions and files, as well as how to make functions more flexible for different use cases:
+
+- Scope is the region of code that has access to an element.
+  - Globally scoped variables are accessible everywhere.
+  - A variable created inside a function has local scope and can’t be accessed outside the function.
+- C++ functions are usually split to make code more modular:
+  - The declaration in a header file.
+  - The definition in another **.cpp** file.
+- Programs with multiple **.cpp** files need to be linked at compile time:
+
+```
+g++ main.cpp fns.cpp
+```
+
+- Header files must be included in the file with ```main()```:
+
+```
+#include "fns.hpp"
+```
+
+- You can define a function inline using the ```inline keyword```, which may or may not improve execution speed.
+- Default arguments can be added to function declarations so that you can call the function without including those arguments.
+- You can overload C++ functions so that they handle different types of input and return different types.
+- A function template enables a function to behave the same with different types of parameters.
+
+# UFO Project
+
+It’s game time! And by that we mean, it’s time for you to roll up your sleeves and build a game: UFO.
+
+<img src="https://github.com/keldavis/c-plus-plus-practice/blob/master/foundations/8.%20Functions/UFO.gif" alt="function" width="500"/>
+
+**The premise**:
+
+Invaders from outer space have arrived and are abducting humans using tractor beams. Players must crack the codeword to stop the abduction!
+
+Ok, we’ll admit it’s quite a bit like that classic game, “Hangman”, but with a better premise. Plus, building this command-line game was the Codecademy 2019 Software Engineer Internship Backend Programming Challenge!
+
+**Note**: This is a more involved project, so please feel free to take breaks as needed.
+
+Project details can be found in the [UFO Project](https://github.com/keldavis/c-plus-plus-practice/tree/master/foundations/8.%20Functions/UFO%20Project) folder
