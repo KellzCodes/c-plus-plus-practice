@@ -72,3 +72,11 @@ The Foundations folder of this project contains the basic fundamentals of C++. T
 	- Default Arguments
 	- Function Overloading
 	- Function Templates
+
+## Tic-Tac-Toe Project
+
+[Tic-Tac-Toe](https://en.wikipedia.org/wiki/Tic-tac-toe) is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3x3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical or diagonal row wins the game.
+
+<img src="https://github.com/keldavis/c-plus-plus-practice/blob/master/Tic-tac-toe-animated.gif" alt="function" width="500"/>
+
+Project details can be found in the [Tic-Tac-Toe](https://github.com/keldavis/c-plus-plus-practice/tree/master/Tic-Tac-Toe) folder.
