@@ -145,3 +145,13 @@ void update_board() {
     board[position - 1] = "⊙";
   }
 }
+
+// Change player
+void change_player() {
+  if (player == 1) {
+    player++;
+  } 
+  else {
+    player--;
+  }
+}

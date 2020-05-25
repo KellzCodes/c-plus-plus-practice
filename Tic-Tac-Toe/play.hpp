@@ -12,3 +12,5 @@ void draw();
 void set_position();
 // update the board
 void update_board();
+// change player
+void change_player();
