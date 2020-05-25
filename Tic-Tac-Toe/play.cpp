@@ -57,3 +57,16 @@ bool isWinner(){
   // return if board is a winner
   return winner;
 }
+
+// determine if a space on the board is full
+bool isFull(){
+  bool full = true;
+  // traverse through board position
+  for (int i = 0; i < 9; i++){
+    // if a board position is occupied by a space, it is not full
+    if (board[i] == " "){
+      full = false;
+    }
+  }
+  return full;
+}
