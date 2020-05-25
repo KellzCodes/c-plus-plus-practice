@@ -3,6 +3,11 @@
 
 // Tic tac toe board has 9 spaces
 std::string board[9] = {" ", " ", " ", " ", " ", " ", " ", " ", " "};
+// player 
+int player = 1;
+
+// board position
+int position
 
 // Intro
 void greet(){
@@ -89,4 +94,42 @@ void draw(){
   std::cout << "     |     |      \n";
 
   std::cout << "\n";
+}
+
+// Set the board position
+void set_position(){
+  std::cout << "Player " << player << "'s Turn (Enter 1-9): ";
+
+  /*
+  while the user input prompt is open, check to see if 
+  the input is a valid answer. While the answers aren't
+  valid, ask the player to put in a valid number. 
+  */
+  while (!(std::cin >> position)) {
+    std::cout << "Player " << player << ", please enter a valid number between 1 and 9: ";
+    // reset the input
+    std::cin.clear();
+    /*
+    read and ignore the input stream until
+    the next line
+    */
+    std::cin.ignore();
+  }
+  
+  std::cout << "\n";
+
+  /*
+  While the board position is not a space, 
+  tell the user the position is already full
+  */
+  while (board[position - 1] != " ") {
+
+    std::cout << "Oops, there's already something in that position!\n\n";
+
+    std::cout << "Player " << player << "'s Turn (Enter 1-9): ";
+    std::cin >> position;
+
+    std::cout << "\n";
+  }
+  
 }

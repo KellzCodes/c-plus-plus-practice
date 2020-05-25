@@ -8,3 +8,5 @@ bool isWinner();
 bool isFull();
 // Draw the board
 void draw();
+// set the board
+void set_position();
