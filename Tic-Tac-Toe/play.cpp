@@ -155,3 +155,16 @@ void change_player() {
     player--;
   }
 }
+
+/*
+while there is no winner and the board is not full,
+set position, update board, change player, then draw
+*/
+void take_turn(){
+  while ( !is_winner() && !filled_up() ) {
+    set_position();
+    update_board();
+    change_player();
+    draw();
+  }
+}

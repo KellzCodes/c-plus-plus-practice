@@ -14,3 +14,5 @@ void set_position();
 void update_board();
 // change player
 void change_player();
+// take turn
+void take_turn();
