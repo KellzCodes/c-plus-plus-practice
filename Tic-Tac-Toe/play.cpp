@@ -1,7 +1,10 @@
 #include <iostream>
 #include <vector>
 
-// Define functions
+// Tic tac toe board has 9 spaces
+std::string board[9] = {" ", " ", " ", " ", " ", " ", " ", " ", " "};
+
+// Intro
 void greet(){
   std::cout << "=============\n" << "Tic-Tac_Toe\n" << "=============\n" << "Instructions: The player who succeeds in\n placing three of their marks in a horizontal,\n vertical or diagonal row wins the game.\n";
   std::cout << "\n";
@@ -20,4 +23,37 @@ void greet(){
   std::cout << "     |     |      \n";
   std::cout << "  7  |  8  |  9   \n";
   std::cout << "     |     |      \n\n";
+}
+
+// determine which board is a winner
+bool isWinner(){
+  bool winner = false;
+  // check rows
+  if ((board[0] == board[1]) && (board[1] == board[2]) && board[0] != " ") {
+    winner = true;
+  } else if ((board[3] == board[4]) && (board[3] == board[5]) && board[3] != " ") {
+    winner = true;
+  } else if ((board[6] == board[7]) && (board[6] == board[8]) && board[6] != " ") {
+    winner = true;
+  }
+
+  // check columns
+  else if ((board[0] == board[3]) && (board[0] == board[6]) && board[0] != " ") {
+    winner = true;
+  } else if ((board[1] == board[4]) && (board[1] == board[7]) && board[1] != " ") {
+    winner = true;
+  } else if ((board[2] == board[5]) && (board[2] == board[8]) && board[2] != " ") {
+    winner = true;
+  } 
+  
+  // check diagonals
+  else if ((board[0] == board[4]) && (board[0] == board[8]) && board[0] != " ") {
+    winner = true;
+  }
+  else if ((board[2] == board[4]) && (board[2] == board[6]) && board[2] != " ") {
+    winner = true;
+  }
+
+  // return if board is a winner
+  return winner;
 }

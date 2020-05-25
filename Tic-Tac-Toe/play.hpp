@@ -2,3 +2,5 @@
 
 // Game intro
 void greet();
+// Determine what board is a winner
+bool isWinner();
