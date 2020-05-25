@@ -4,5 +4,7 @@
 void greet();
 // Determine what board is a winner
 bool isWinner();
-// Determine if board position is full
+// Determine if board space is full
 bool isFull();
+// Draw the board
+void draw();
