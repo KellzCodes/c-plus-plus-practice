@@ -10,3 +10,5 @@ bool isFull();
 void draw();
 // set the board
 void set_position();
+// update the board
+void update_board();

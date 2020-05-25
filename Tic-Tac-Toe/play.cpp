@@ -133,3 +133,15 @@ void set_position(){
   }
   
 }
+
+// Update the board
+void update_board() {
+  // player 1 is X
+  if (player % 2 == 1) {
+    board[position - 1] = "✖";
+  } 
+  // player 2 is O
+  else {
+    board[position - 1] = "⊙";
+  }
+}
