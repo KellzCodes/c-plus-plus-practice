@@ -1,13 +1,14 @@
 #include <iostream>
-#include <vector>
+#include "play.hpp"
 
 // Tic tac toe board has 9 spaces
 std::string board[9] = {" ", " ", " ", " ", " ", " ", " ", " ", " "};
+
 // player 
 int player = 1;
 
 // board position
-int position
+int position;
 
 // Intro
 void greet(){
@@ -31,7 +32,7 @@ void greet(){
 }
 
 // determine which board is a winner
-bool isWinner(){
+bool is_winner(){
   bool winner = false;
   // check rows
   if ((board[0] == board[1]) && (board[1] == board[2]) && board[0] != " ") {
@@ -64,7 +65,7 @@ bool isWinner(){
 }
 
 // determine if a space on the board is full
-bool isFull(){
+bool is_full(){
   bool full = true;
   // traverse through board position
   for (int i = 0; i < 9; i++){
@@ -161,10 +162,25 @@ while there is no winner and the board is not full,
 set position, update board, change player, then draw
 */
 void take_turn(){
-  while ( !is_winner() && !filled_up() ) {
+  while ( !is_winner() && !is_full() ) {
     set_position();
     update_board();
     change_player();
     draw();
   }
+}
+
+/*
+if there is a winner or the board is full,
+the game is over.
+*/
+void end_game() {
+
+  if (is_winner()) {
+    std::cout << "There's a winner!\n";
+  }
+  else if (is_full()) {
+    std::cout << "There's a tie!\n";
+  }
+
 }
