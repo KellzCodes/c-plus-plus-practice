@@ -3,4 +3,6 @@
 
 int main() {
   greet();
+  take_turn();
+  end_game();  
 }
