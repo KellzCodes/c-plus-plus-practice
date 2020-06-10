@@ -1,6 +1,7 @@
 # Part I: The Basics
 
 Lesson 1: Getting Started
+
 	- A Brief History of C++
 		- Connection to C
 		- Advantages of C++
