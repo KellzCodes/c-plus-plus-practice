@@ -28,5 +28,16 @@ Depending on your current proficiency levels with C++, you can choose the sectio
 
 - **Part V, "Advanced C++ Concepts,"** explains language capabilities such as smart pointers and exception handling, which are not a must in a C++ application but help make a significant contribution toward increasing its stability and quality. This part ends with a note on best practices in writing good C++ applications, and introduces you to the new features expected to make it to the next version of the ISO standard called C++17.
 
-My text in an purple box.
-{: .alert .alert-gitlab-purple}
+## Conventions Used in This Repo
+
+- **Note**: Notes provide additional information related to material you read.
+
+- **Caution**: Cautions alert your attention to problems or side effects that can occur in special situations.
+
+- **Tip**: Tips give you best practices in writing your C++ programs.
+
+| **DO**                                                                                            | **DON'T**                                                        |
+|---------------------------------------------------------------------------------------------------|------------------------------------------------------------------|
+| **DO** use the "Do/Don't" boxes to find  a quick summary of a fundamental  principle in a lesson. | **DON'T** overlook the useful information offered in these boxes |
+
+This book uses different typefaces to differentiate between code and plain English. Throughout the lessons, code, commands, and programming-related terms appear in a computer ```typeface```.
