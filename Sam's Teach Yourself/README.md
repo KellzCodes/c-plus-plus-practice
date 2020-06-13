@@ -40,4 +40,4 @@ Depending on your current proficiency levels with C++, you can choose the sectio
 |---------------------------------------------------------------------------------------------------|------------------------------------------------------------------|
 | **DO** use the "Do/Don't" boxes to find  a quick summary of a fundamental  principle in a lesson. | **DON'T** overlook the useful information offered in these boxes |
 
-This book uses different typefaces to differentiate between code and plain English. Throughout the lessons, code, commands, and programming-related terms appear in a computer ```typeface```.
+This repo uses different typefaces to differentiate between code and plain English. Throughout the lessons, code, commands, and programming-related terms appear in a computer ```typeface```.
