@@ -252,3 +252,5 @@ int main(){
 ```
 
 4. Fix the error in the program in Exercise 3, compile, link, and run it. What does it do?
+
+Workshop solutions can be found in the [answers](https://github.com/keldavis/c-plus-plus-practice/tree/master/Sam's%20Teach%20Yourself/Part%201%20The%20Basics/Lesson%201%20Getting%20Started/answers) folder

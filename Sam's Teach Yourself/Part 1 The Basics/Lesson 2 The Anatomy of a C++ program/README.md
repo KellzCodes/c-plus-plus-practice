@@ -298,3 +298,5 @@ void main(){
 
 1.	Fix the bug in Exercise 1 and recompile, link, and run it.
 2.	Modify Listing 2.4 to demonstrate subtraction (using ```—```) and multiplication (using ```*```)
+
+Workshop solutions can be found in the [answers](https://github.com/keldavis/c-plus-plus-practice/tree/master/Sam's%20Teach%20Yourself/Part%201%20The%20Basics/Lesson%202%20The%20Anatomy%20of%20a%20C%2B%2B%20program/answers) folder.
