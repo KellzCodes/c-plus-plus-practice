@@ -4,7 +4,7 @@
 - [Common Compiler Supported C++ Variable Types](#Common-Compiler-Supported-C-plus-plus-Variable-Types)
 - [Determining the Size of a Variable Using sizeof](Determining-the-Size-of-a-Variable-Using-sizeof)
 - [Automatic Type Inference Using auto](Automatic-Type-Inference-Using-auto)
-- [Using typedef to Substitute a Variable's Type](Using-typedef-to-Substitute-a-Variable's-Type)
+- [Using typedef to Substitute a Variable's Type](Using-typedef-to-Substitute-a-Variable-Type)
 - [What Is a Constant?](#What-Is-a-Constant?)
 - [Keywords You Cannot Use as Variable or Constant Names](#Keywords-You-Cannot-Use-as-Variable-or-Constant-Names)
 
@@ -336,7 +336,7 @@ See how instead of deciding that ```coinFlippedHeads``` should be of type ```boo
 
 Even if auto seems to be a trivial feature at first sight, it makes programming a lot easier in those cases where the type variable is a complex type. The role of ```auto``` in writing simpler, yet type-safe code is revisited in Lesson 15, "An Introduction to the Standard Template Library," and beyond.
 
-## Using ```typedef``` to Substitute a Variable's Type
+## Using ```typedef``` to Substitute a Variable Type
 
 C++ allows you to substitute variable types to something that you might find convenient. You use the keyword ```typedef``` for that. Here is an example where a programmer wants to call an ```unsigned int``` a descriptive ```STRICTLY POSITIVE INTEGER```.
 
