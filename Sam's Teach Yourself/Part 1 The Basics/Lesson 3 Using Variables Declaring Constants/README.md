@@ -4,7 +4,7 @@
 - [Common Compiler Supported C++ Variable Types](#Common-Compiler-Supported-C-plus-plus-Variable-Types)
 - [Determining the Size of a Variable Using sizeof](Determining-the-Size-of-a-Variable-Using-sizeof)
 - [Automatic Type Inference Using auto](Automatic-Type-Inference-Using-auto)
-- [Using typedef to Substitute a Variable's Type](Using-typedef-to-Substitute-a-Variable-Type)
+- [Using typedef to Substitute a Variable's Type](#Using-typedef-to-Substitute-a-Variable-Type)
 - [What Is a Constant?](#What-Is-a-Constant?)
 - [Keywords You Cannot Use as Variable or Constant Names](#Keywords-You-Cannot-Use-as-Variable-or-Constant-Names)
 
