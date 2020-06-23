@@ -367,9 +367,48 @@ Thus, constants are like variables in C++ except that these cannot be changed. S
 - Enumerated constants using the enum keyword 
 - Defined constants that are not recommended and deprecated
 
-### Literal Constants  
+### Literal Constants 
+
+Literal constants can be of many types—integer, string, and so on. In your first C++  program in Listing 1.1, you displayed "Hello World" using the following statement:
+
+```std: : cout << "Hello World" << std: : endl;```
+
+In here, "Hello World" is a string literal constant. You literally have been using literal constants all the while! When you declare an integer someNumber, like this: 
+
+```int someNumber = 10;```
+
+The integer variable ```someNumber``` is assigned an initial value of ten. Here decimal ten  is a part of the code, gets compiled into the application, is unchangeable, and is a literal constant too. You may initialize the integer using a literal in octal notation, like this: 
+ 
+```int someNumber	012 // octal 12 evaluates to decimal 10```
+
+Starting in C++14, you may also use binary literals, like this: 
+ 
+```int someNumber — Ob1010; // binary 1010 evaluates to decimal 10```
+
+<img src="https://github.com/keldavis/c-plus-plus-practice/blob/master/Sam's%20Teach%20Yourself/Part%201%20The%20Basics/note%20pics/tippg52.jpeg" alt="tippg52" width="500"/>
 
 ### Declaring Variables as Constants Using ```const```
+
+The most important type of constants in C++ from a practical and programmatic point of view are declared by using keyword ```const``` before the variable type. The generic declaration looks like the following:
+
+```const type-name constant-name = value;```
+
+Let's see a simple application that displays the value of a constant called ```pi``` (see Listing 3.7 or [constant.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/Sam's%20Teach%20Yourself/Part%201%20The%20Basics/Lesson%203%20Using%20Variables%20Declaring%20Constants/constant.cpp)).
+
+<img src="https://github.com/keldavis/c-plus-plus-practice/blob/master/Sam's%20Teach%20Yourself/Part%201%20The%20Basics/note%20pics/listing3.7.jpeg" alt="listing7" width="500"/>
+
+#### Output
+
+The value of constant pi is: 3.14286
+
+#### Analysis
+
+Note the declaration of constant ```pi``` in Line 7. We use the ```const``` keyword to tell the compiler that ```pi``` is a constant of type ```double```. If you uncomment Line 11 where the
+programmer tries to assign a value to a variable you have defined as a constant, you see a compile failure that says something similar to, "You cannot assign to a variable that is const." Thus, constants are a powerful way to ensure that certain data cannot be modified.
+
+<img src="https://github.com/keldavis/c-plus-plus-practice/blob/master/Sam's%20Teach%20Yourself/Part%201%20The%20Basics/note%20pics/notepg53.jpeg" alt="notepg53" width="500"/>
+
+Constants are useful when declaring the length of static arrays, which are fixed at compile time. Listing 4.2 in Lesson 4, "Managing Arrays and Strings," includes a sample that demonstrates the use of a ```const int``` to define the length of an array.
 
 ### Constant Expressions Using ```constexpr```
 
