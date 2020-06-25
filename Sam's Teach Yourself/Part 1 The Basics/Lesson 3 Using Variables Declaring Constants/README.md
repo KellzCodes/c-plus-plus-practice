@@ -398,8 +398,7 @@ Let's see a simple application that displays the value of a constant called ```p
 <img src="https://github.com/keldavis/c-plus-plus-practice/blob/master/Sam's%20Teach%20Yourself/Part%201%20The%20Basics/note%20pics/listing3.7.jpeg" alt="listing7" width="500"/>
 
 #### Output
-
-The value of constant pi is: 3.14286
+	> The value of constant pi is: 3.14286
 
 #### Analysis
 
@@ -411,6 +410,33 @@ programmer tries to assign a value to a variable you have defined as a constant,
 Constants are useful when declaring the length of static arrays, which are fixed at compile time. Listing 4.2 in Lesson 4, "Managing Arrays and Strings," includes a sample that demonstrates the use of a ```const int``` to define the length of an array.
 
 ### Constant Expressions Using ```constexpr```
+
+Keyword ```constexpr``` allows function-like declaration of constants:
+
+```constexpr double GetPi() {return 22.0 / 7;}```
+
+One ```constexpr``` can use another:
+ 
+```constexpr double TwicePi() {return 2 * GetPi ( ) ; }```
+
+```constexpr``` may look like a function, however, allows for optimization possibilities from the compiler's and application's point of view. So long as a compiler is capable of evaluating a constant expression to a constant, it can be used in statements and expressions at places where a constant is expected. In the preceding example, ```TwicePi()``` is a ```constexpr``` that uses a constant expression ```GetPi()```. This will possibly trigger a compile-time optimization wherein every usage of ```TwicePi()``` is simply replaced by 6.28571 by the compiler, and not the code that would calculate 2 x 22 / 7 when executed.
+
+Listing 3.8 or [constant_expression.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/Sam's%20Teach%20Yourself/Part%201%20The%20Basics/Lesson%203%20Using%20Variables%20Declaring%20Constants/constant_expression.cpp) demonstrates the usage of ```constexpr```. 
+
+<img src="https://github.com/keldavis/c-plus-plus-practice/blob/master/Sam's%20Teach%20Yourself/Part%201%20The%20Basics/note%20pics/listing3.8.jpg" alt="listing8" width="500"/>
+
+#### Output
+	> constant pi contains value 3.14286 
+	> constexpr GetPi() returns value 3.14286 
+	> constexpr TwicePi() returns value 6.28571
+
+#### Analysis
+
+The program demonstrates two methods of deriving the value of ```pi``` —one as a constant variable ```pi``` as declared in Line 8 and another as a constant expression ```GetPi()``` declared in Line 2. ```GetPi()``` and ```Twicepi()``` may look like functions, but they are not exactly. Functions are invoked at program execution time. But, these are constant expressions and the compiler had already substituted every usage of ```GetPi()``` by 3.14286 and every usage of ```Twicepi()``` by 6.28571. Compile-time resolution of ```Twicepi()``` increases the speed Of program execution when compared to the same calculation being contained in a function.
+
+<img src="https://github.com/keldavis/c-plus-plus-practice/blob/master/Sam's%20Teach%20Yourself/Part%201%20The%20Basics/note%20pics/notepg54.jpeg" alt="notepg54" width="500"/>
+
+<img src="https://github.com/keldavis/c-plus-plus-practice/blob/master/Sam's%20Teach%20Yourself/Part%201%20The%20Basics/note%20pics/tippg55.jpeg" alt="tippg55" width="500"/>
 
 ### Enumerations
 
