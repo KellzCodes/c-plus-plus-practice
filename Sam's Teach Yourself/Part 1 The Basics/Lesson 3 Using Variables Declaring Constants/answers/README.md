@@ -54,10 +54,10 @@ Circumference: 25.1328
 ```
 
 4.	You get a compilation warning (not error) if you store the result of calculating area and circumference in an integer and the output looks like this:	
-	> Enter circle's radius
+	> Enter circle's radius: 4
 	>
 	> Area = 50
 	>
-	> Circumference	25
+	> Circumference = 25
 
 5. ```auto``` is a construct where the compiler automatically deduces the type the variable can take depending on the value it is being initialized to. The code in question does not initialize and hence causes a compilation failure.
