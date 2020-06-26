@@ -574,3 +574,5 @@ The Workshop provides quiz questions to help you solidify your understanding of 
 5. **BUGBUSTERS**: What is wrong in the following initialization:
 	
 	```auto Integer;```
+
+Workshop solutions can be found in the [answers](https://github.com/keldavis/c-plus-plus-practice/tree/master/Sam's%20Teach%20Yourself/Part%201%20The%20Basics/Lesson%203%20Using%20Variables%20Declaring%20Constants/answers) folder.
