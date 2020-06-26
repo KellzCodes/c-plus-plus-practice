@@ -468,7 +468,7 @@ enum CardinalDirections{
 
 Enumerations are used as user-defined types. Variables of this type can be assigned a range of values restricted to the enumerators contained in the enumeration. So, if defining a variable that contains the colors of a rainbow, you declare the variable like this:
 
-```RainbowC010rs MyFavoriteColor = Blue; // Initial value```
+```RainbowColors MyFavoriteColor = Blue; // Initial value```
 
 In the preceding line of code, you declared an enumerated constant ```MyFavoritecolor``` of type ```Rainbowcolors```. This enumerated constant variable is restricted to contain any of the legal ```VIBGYOR``` colors and no other value.
 
