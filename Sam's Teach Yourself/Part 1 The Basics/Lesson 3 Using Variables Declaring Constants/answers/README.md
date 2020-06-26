@@ -47,9 +47,11 @@ int main (){
 ```
 
 **Output**
-	> Enter circle's radius : 4
-	> Area	50.2656
-	> Circumference	25.1328
+```
+Enter circle's radius : 4
+Area: 50.2656
+Circumference: 25.1328
+```
 
 4.	You get a compilation warning (not error) if you store the result of calculating area and circumference in an integer and the output looks like this:	
 	> Enter circle's radius
