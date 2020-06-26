@@ -440,6 +440,137 @@ The program demonstrates two methods of deriving the value of ```pi``` —one as
 
 ### Enumerations
 
+There are situations where a particular variable should be allowed to accept only a certain set of values. These are situations where you don't want the colors in the rainbow to contain Turquoise or the directions on a compass to contain Left. In both these cases, you need a type of variable whose values are restricted to a certain set defined by you. *Enumerations* are exactly the tool you need in this situation and are characterized by the keyword ```enum```. Enumerations comprise a set of constants called *enumerators*.
+In the following example, the enumeration ```Rainbowcolors``` contains individual colors such as ```Violet``` as enumerators: 
+
+```
+enum RainbowColors{
+	Violet = 0,
+	Indigo,
+	Blue,
+	Green,
+	Yellow,  
+	Orange,  
+	Red	
+};
+```
+
+Here's another enumeration for the cardinal directions:
+
+```
+enum CardinalDirections{
+	North, 
+	South,
+	East,
+ 	West
+};
+ ```
+
+Enumerations are used as user-defined types. Variables of this type can be assigned a range of values restricted to the enumerators contained in the enumeration. So, if defining a variable that contains the colors of a rainbow, you declare the variable like this:
+
+```RainbowC010rs MyFavoriteColor = Blue; // Initial value```
+
+In the preceding line of code, you declared an enumerated constant ```MyFavoritecolor``` of type ```Rainbowcolors```. This enumerated constant variable is restricted to contain any of the legal ```VIBGYOR``` colors and no other value.
+
+<img src="https://github.com/keldavis/c-plus-plus-practice/blob/master/Sam's%20Teach%20Yourself/Part%201%20The%20Basics/note%20pics/notepg56.jpeg" alt="notepg56" width="500"/>
+
+Listing 3.9 or [enumerated.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/Sam's%20Teach%20Yourself/Part%201%20The%20Basics/Lesson%203%20Using%20Variables%20Declaring%20Constants/enumerated.cpp) demonstrates how enumerated constants are used to hold the four cardinal directions, with an initializing value supplied to the first one.
+
+<img src="https://github.com/keldavis/c-plus-plus-practice/blob/master/Sam's%20Teach%20Yourself/Part%201%20The%20Basics/note%20pics/listing3.9.jpeg" alt="listing9" width="500"/>
+
+#### Output
+	> Displaying directions and their symbolic values
+	> North: 25 
+	> South: 26
+	> East: 27
+	> West: 28 
+	> Variable windDirection = 26
+
+#### Analysis
+
+Note how we have enumerated the four cardinal directions but have given the first North an initial value of 25 (see Line 6). This automatically ensures that the following constants are assigned values 26, 27, and 28 by the compiler as demonstrated in the output. In Line 20 you create a variable of type ```CardinalDirections``` that is assigned an initial value ```South```. When displayed on the screen in Line 21, the compiler dispatches the integer value associated with South, which is 26.
+
+<img src="https://github.com/keldavis/c-plus-plus-practice/blob/master/Sam's%20Teach%20Yourself/Part%201%20The%20Basics/note%20pics/tippg57.jpeg" alt="tippg57" width="500"/>
+
 ### Defining Constants Using ```#define```
 
+First and foremost, don't use this if you are writing a program anew. The only reason this book analyzes the definition of constants using ```#define``` is to help you understand certain legacy programs that do define constants such as pi using this syntax:
+
+```#define pi 3.14286```
+ 
+```#define``` is a preprocessor macro, and what is done here is that all mentions of ```pi``` henceforth are replaced by ```3.14286``` for the compiler to process. Note that this is a text replacement (read: non-intelligent replacement) done by the preprocessor. The compiler neither knows nor cares about the actual type of the constant in question.
+
+<img src="https://github.com/keldavis/c-plus-plus-practice/blob/master/Sam's%20Teach%20Yourself/Part%201%20The%20Basics/note%20pics/cautionpg57.jpeg" alt="cautionpg57" width="500"/>
+
 ## Keywords You Cannot Use as Variable or Constant Names
+
+Some words are reserved by C++, and you cannot use them as variable names. These keywords have special meaning to the C++ compiler. Keywords include ```if```, ```while```, ```for```, and ```main```. A list of keywords defined by C++ is presented in Table 3.2. Your compiler might have additional reserved words, so you should check its manual for a complete list.
+
+<img src="https://github.com/keldavis/c-plus-plus-practice/blob/master/Sam's%20Teach%20Yourself/Part%201%20The%20Basics/note%20pics/table3.2.jpeg" alt="table2" width="500"/>
+
+<img src="https://github.com/keldavis/c-plus-plus-practice/blob/master/Sam's%20Teach%20Yourself/Part%201%20The%20Basics/note%20pics/dodontpg59.jpeg" alt="dodontpg59" width="500"/>
+
+## Summary
+
+In this lesson you learned about using memory to store values temporarily in variables and constants. You learned that variables have a size determined by their type and that the operator ```sizeof``` can be used to determine the size of one. You got to know of different types of variables such as ```bool```, ```int```, and so on and that they are to be used to contain different types of data. The right choice of a variable type is important in effective programming, and the choice of a variable that's too small for the purpose can result in a wrapping error or an overflow situation. You learned about the keyword ```auto```, where you let the compiler decide the data-type for you on the basis of the initialization value of the variable.
+
+You also learned about the different types of constants and usage of the most important ones among them using the keywords ```const```, ```constexpr```, and ```enum```.
+
+## Q&A
+
+**Q Why define constants at all if you can use regular variables instead of them?**
+
+**A** Constants, especially those declared using the keyword const, are your way of telling the compiler that the value of a particular variable be fixed and not allowed to change. Consequently, the compiler always ensures that the constant variable is never assigned another value, not even if another programmer was to take up your work and inadvertently try to overwrite the value. So, declaring constants where you know the value of a variable should not change is a good programming practice  and increases the quality of your application.
+
+**Q Why should I initialize the value of a variable?**
+
+**A** If you don't initialize, you don't know what the variable contains for a starting value. The starting value is just the contents of the location in the memory that are reserved for the variable. Initialization such as that seen here:
+
+```int myFavoriteNumber = 0;```
+
+writes the initial value of your choosing, in this case 0, to the memory location reserved for the variable ```myFavoriteNumber``` as soon as it is created. There are situations where you do conditional processing depending on the value of a variable (often checked against nonzero). Such logic does not work reliably without initialization because an unassigned or initiated variable contains junk that is often nonzero and random.
+
+**Q Why does C++ give me the option of using ```short int``` and ```int``` and ```long int```? Why not just always use the integer that always allows for the highest number to be stored within?**
+
+**A** C++ is a programming language that is used to program for a variety of applications, many running on devices with little computing capacity or memory  resources. The simple old cell phone is one example where processing capacity and available memory are both limited. In this case, the programmer can often save memory or speed or both by choosing the right kind of variable if he doesn't need high values. If you are programming on a regular desktop or a high-end smart phone, chances are that the performance gained or memory saved in choosing one integer type over another is going to be insignificant and in some cases even absent.
+
+**Q Why should I not use global variables frequently? Isn't it true that they're usable throughout my application and I can save some time otherwise lost to passing values around functions?**
+
+**A** Global variables can be read and assigned globally. The latter is the problem as they can be changed globally. Assume you are working on a project with a few other programmers in a team. You have declared your integers and other variables to be global. If any programmer in your team changes the value of your integer inadvertently in his code—which even might be a different .CPP file than the one you are using—the reliability of your code is affected. So, sparing a few seconds or minutes should not be criteria, and you should not use global variables indiscriminately to ensure the stability of your code.
+
+**Q C++ is giving me the option of declaring unsigned integers that are supposed to contain only positive integer values and zero. What happens if I decrement a zero value contained in an unsigned int?**
+
+**A** You see a wrapping effect. Decrementing an unsigned integer that contains 0 by 1 means that it wraps to the highest value it can hold! Check Table 3.1 —you see that an ```unsigned short``` can contain values from 0 to 65,535. So, declare an ```unsigned short``` and decrement it to see the unexpected: 
+
+```
+unsigned short myShortInt = 0; // Initial Value 
+myShortInt = myShortInt - 1; // Decrement by 1  
+std::cout << myShortInt << std: : endl; // Output: 65535!
+```
+ 
+Note that this is not a problem with the unsigned short, rather with your usage of the same. An unsigned integer (or short or long) is not to be used when negative values are within the specifications. If the contents of ```myShortInt``` are to be used to dynamically allocate those many number of bytes, a little bug that allows a zero value to be decremented would result in 64KB being allocated! Worse, if ```myShortInt``` were to be used as an index in accessing a location of memory, chances are high that your application would access an external location and would crash!
+
+## Workshop
+
+The Workshop provides quiz questions to help you solidify your understanding of the material covered and exercises to provide you with experience in using what you've learned. Try to answer the quiz and exercise questions before checking the answers, and be certain that you understand the answers before continuing to the next lesson.
+
+1.	What is the difference between a signed and an unsigned integer?
+2.	Why should you not use ```#define``` to declare a constant?
+3.	Why would you initialize a variable?
+4.	Consider the ```enum``` below. What is the value of Queen?
+
+```enum YourCards {Ace, Jack, Queen, King};```
+
+5.	What is wrong with this variable name?
+
+```int Integer = 0;```
+
+## Exercises
+
+1. Modify ```enum YourCards``` in quiz question 4 to demonstrate that the value of ```Queen``` can be 45.
+2. Write a program that demonstrates that the size of an unsigned integer and a normal integer are the same, and that both are smaller in size than a long integer.
+3. Write a program to calculate the area and circumference of a circle where the radius is fed by the user.
+4. In Exercise 3, if the area and circumference were to be stored in integers, how would the output be any different?
+5. **BUGBUSTERS**: What is wrong in the following initialization:
+	
+	```auto Integer;```
