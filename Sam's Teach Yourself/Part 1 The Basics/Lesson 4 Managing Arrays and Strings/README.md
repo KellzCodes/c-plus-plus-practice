@@ -221,7 +221,7 @@ int threeRowsThreeColumns[3][3] = {{-501, 205, 2016} , {989, 101, 206} , {303, 4
 
 It has been initialized in a way you can visualize three arrays, each containing three integers. Here, the integer element with value ```205``` is at position ```[0][1]```. The element with value ```456``` is at position ```[2][1]```. Listing 4.3 and [MultidimensionalArray.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/Sam's%20Teach%20Yourself/Part%201%20The%20Basics/Lesson%204%20Managing%20Arrays%20and%20Strings/MultidimensionalArray.cpp) explains how integer elements in this array can be accessed.
 
-<img src="https://github.com/keldavis/c-plus-plus-practice/blob/master/Sam's%20Teach%20Yourself/Part%201%20The%20Basics/note%20pics/listing4.3.jpg" alt="listing3" width="500"/>
+<img src="https://github.com/keldavis/c-plus-plus-practice/blob/master/Sam's%20Teach%20Yourself/Part%201%20The%20Basics/note%20pics/listing4.3.jpg" alt="listing3" width="500" height="500" />
 
 #### Output
 
