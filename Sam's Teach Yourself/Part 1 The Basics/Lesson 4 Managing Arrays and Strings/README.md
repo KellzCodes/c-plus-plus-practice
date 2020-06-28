@@ -235,7 +235,7 @@ Row 2: 303 456 596
 
 Note how you have accessed elements in the array row-wise, starting with the array that is Row 0 (the first row, with index 0) and ending with the array that is Row 2 (third row, with index 2). As each of the rows is an array, the syntax for addressing the third element in the first row (row index 0, element index 2) is seen in Line 10.
 
-<img src="https://github.com/keldavis/c-plus-plus-practice/blob/master/Sam's%20Teach%20Yourself/Part%201%20The%20Basics/note%20pics/Notepg74.jpg" alt="Notepg74" width="700"/>
+<img src="https://github.com/keldavis/c-plus-plus-practice/blob/master/Sam's%20Teach%20Yourself/Part%201%20The%20Basics/note%20pics/Notepg74.jpg" alt="Notepg74" width="500"/>
 
 ## Dynamic Arrays
 
