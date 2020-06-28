@@ -8,7 +8,7 @@ int main(){
 	
 	cout << "Row 1: " << threeRowsThreeColumns[1][0] << " " << threeRowsThreeColumns[1][1] << " " << threeRowsThreeColumns[1][2] << endl;
 	
-	cout << "Row 2: " << threeRowsThreeColumns[2][0] << " " << threeRowsThreeColumns[2][1] << " " << threeRowsThreeColumns << endl;
+	cout << "Row 2: " << threeRowsThreeColumns[2][0] << " " << threeRowsThreeColumns[2][1] << " " << threeRowsThreeColumns[2][2]<< endl;
 	
 	return 0;
-} 
+}
