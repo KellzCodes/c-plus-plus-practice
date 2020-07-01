@@ -39,7 +39,7 @@ myNums[1] = 45
 myNums[0] = -55
 ```
 
-2. One nested loop equivalent of Listing 6.13 that adds elements in two arrays in the reverse order is demonstrated below:
+2. One nested loop equivalent of [Listing 6.13a]() and [Listing 6.13b]() that adds elements in two arrays in the reverse order is demonstrated below:
 
 ```
 #include <iostream>
