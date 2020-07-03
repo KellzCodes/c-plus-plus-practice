@@ -43,10 +43,36 @@ else
 
 <img src="https://github.com/keldavis/c-plus-plus-practice/blob/master/Sam's%20Teach%20Yourself/Part%201%20The%20Basics/note%20pics/Notepg115.jpg" alt="Notepg115" width="500"/>
 
-Let's analyze this construct in Listing 6.1 (and [MultiplyOrAdd.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/Sam's%20Teach%20Yourself/Part%201%20The%20Basics/Lesson%206%20Controlling%20Program%20Flow/MultiplyOrAdd.cpp)), which enables the user to decide whether he wants to either multiply or divide two numbers, hence using conditional processing to generate the desired output. 
+Let's analyze this construct in Listing 6.1 (and [MultiplyOrAdd.cpp](https://github.com/keldavis/c-plus-plus-practice/blob/master/Sam's%20Teach%20Yourself/Part%201%20The%20Basics/Lesson%206%20Controlling%20Program%20Flow/MultiplyOrAdd.cpp)), which enables the user to decide whether he wants to either multiply or add two numbers, hence using conditional processing to generate the desired output. 
 
 <img src="https://github.com/keldavis/c-plus-plus-practice/blob/master/Sam's%20Teach%20Yourself/Part%201%20The%20Basics/note%20pics/Listing6.1pg115.jpg" alt="listing1pg115" width="500"/>
 <img src="https://github.com/keldavis/c-plus-plus-practice/blob/master/Sam's%20Teach%20Yourself/Part%201%20The%20Basics/note%20pics/Listing6.1pg116.jpg" alt="listing1pg116" width="500"/>
+
+#### Output
+
+```
+Enter two integers:
+25
+56
+Enter 'm' to multiply, anything, anything else to add: m
+result is: 1400
+```
+
+Next run:
+
+```
+Enter two integers:
+25
+56
+Enter 'm' to multiply, anything, anything else to add: a
+result is: 81
+```
+
+#### Analysis
+
+Note the use of ```if``` in Line 15 and ```else``` in Line 17. We are instructing the compiler to execute multiplication in Line 15 when the expression ```(userSelection == 'm')``` that follows ```if``` evaluates to ```true``` or to execute addition if the expression evaluates to ```false```. ```(userSelection == 'm')``` is an expression that evaluates to ```true``` when the user has entered character *m* (case-sensitive), else it evaluates to ```false```. Thus, this simple program models the flowchart in [Figure 6.1](https://github.com/keldavis/c-plus-plus-practice/blob/master/Sam's%20Teach%20Yourself/Part%201%20The%20Basics/note%20pics/Figure6.1.jpg) and demonstrates how your application can behave differently in different situations.
+
+<img src="https://github.com/keldavis/c-plus-plus-practice/blob/master/Sam's%20Teach%20Yourself/Part%201%20The%20Basics/note%20pics/Notepg116.jpg" alt="notepg116" width="500"/>
 
 ### Executing Multiple Statements Conditionally
 
